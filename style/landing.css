@@ -1,0 +1,53 @@
+.landing__title {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.landing__title span {
+  color: var(--azure-blue);
+}
+
+.landing__description {
+  font-size: 25px;
+  margin: 25px 0 25px 40px;
+}
+
+.landing__button {
+  margin: 1.25rem 0 1.25rem 2.5rem;
+  width: fit-content;
+  padding: 1.25rem 3rem;
+  border-radius: 1.5rem;
+  font-weight: 700;
+  font-size: 25px;
+  background-color: var(--azure-blue);
+}
+
+.landing__circle {
+  aspect-ratio: 1 / 1;
+  background-color: white;
+}
+
+.landing__circle>div {
+  background-color: var(--azure-blue);
+  width: 83.5%;
+  aspect-ratio: 1/1;
+}
+
+@media (max-width: 767px) {
+
+  .landing__button,
+  .landing__description {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .landing__title {
+    font-size: 30px;
+  }
+
+  .landing__button,
+  .landing__description {
+    font-size: 20px;
+  }
+}

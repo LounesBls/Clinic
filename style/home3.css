@@ -1,0 +1,129 @@
+/* Css Variables */
+@import url('./var.css');
+
+/* Our Specialists Section */
+#our-specialists {
+    background-color: #FFFFFF;
+    padding: 31px 90px;
+}
+
+@media (min-width: 767.9px) {
+    #our-specialists {
+        padding: 31px 90px;
+    }
+}
+
+/* Heading Section */
+
+.heading h2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 62.85px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 500px) {
+    .heading h2 {
+        font-size: 45px;
+    }
+}
+
+/* End Heading Section */
+
+/* Slider */
+#our-specialists .row .card {
+    width: 300.99px;
+    /* height: 663px; */
+    border-radius: 25px;
+    padding: 0;
+    background-color: var(--card-bg);
+}
+
+#our-specialists .row .card img {
+    height: 356.47px;
+    border-radius: 25px 25px 0px 0px;
+}
+
+@media (max-width: 767.9px) {
+    #our-specialists .carousel-inner {
+        overflow: hidden;
+    }
+
+    #our-specialists .row {
+        justify-content: center;
+    }
+}
+
+#our-specialists .carousel-inner {
+    padding-left: .80rem;
+}
+
+#our-specialists .carousel-indicators {
+    bottom: -2.5rem !important;
+}
+
+#our-specialists .carousel-indicators [data-bs-target] {
+    background-color: var(--card-bg);
+    border: 1px solid;
+    width: 45px;
+    height: 16px;
+    border-radius: 50px;
+    border: 1px;
+    opacity: 1;
+    transition: .3s;
+}
+
+#our-specialists .carousel-indicators [data-bs-target].active {
+    background-color: #0070CD;
+    width: 80px;
+    height: 16px;
+    border-radius: 50px;
+    /* border: 1px solid; */
+
+}
+
+#our-specialists .card-body {
+    height: calc(663px - 356.47px);
+    padding-bottom: 0;
+}
+
+#our-specialists .card-body h3,
+#our-specialists .card-body h5 {
+    font-size: 25px;
+    line-height: 31.43px;
+    text-align: left;
+}
+
+#our-specialists .card-body h3 {
+    font-weight: 700;
+}
+
+#our-specialists .card-body h5 {
+    font-weight: 600;
+}
+
+#our-specialists .card-body p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.63px;
+    text-align: left;
+}
+
+#our-specialists .card-body a {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25.14px;
+    text-align: left;
+    text-decoration: none;
+
+    svg {
+        width: 39.74px;
+
+        path {
+            fill: #0070CD;
+        }
+    }
+}
+
+/* End Slider */

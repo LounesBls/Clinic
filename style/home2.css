@@ -1,0 +1,66 @@
+/* Css Variables */
+@import url('./var.css');
+
+#our-sevices {
+    background-color: #FFFFFF;
+}
+
+@media (min-width: 767.9px) {
+    #our-sevices {
+        padding: 31px 90px;
+    }
+}
+
+#our-sevices .row {
+    justify-content: center;
+    gap: 20px;
+}
+
+.heading h2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 62.85px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 500px) {
+    .heading h2 {
+        font-size: 45px;
+    }
+}
+
+#our-sevices h2,
+#our-sevices .card {
+    font-family: "Source Sans Pro";
+}
+
+#our-sevices .card {
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    border: solid #0070CD;
+    width: 300px;
+    height: 386px;
+    padding: 44px 11px;
+}
+
+#our-sevices .card img {
+    width: 90px;
+    height: 101.89px;
+    margin: 0 auto 0;
+    background-size: cover;
+}
+
+#our-sevices .card h3 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 44px;
+    text-align: center;
+}
+
+#our-sevices .card p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25.14px;
+    text-align: center;
+}

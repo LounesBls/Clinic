@@ -1,0 +1,58 @@
+.navbar {
+  margin-bottom: 52px;
+}
+
+@media (max-width: 1199px) {
+  .navbar {
+    margin-bottom: 3rem;
+  }
+
+  .navbar-collapse {
+    border-bottom: 1px solid #bebebe;
+    padding-bottom: 1rem;
+  }
+
+  .navbar-nav {
+    padding-left: 2rem;
+  }
+
+  .auth {
+    margin-left: 1.25rem;
+  }
+}
+
+.navbar-toggler {
+  background-color: var(--azure-blue);
+  box-shadow: none !important;
+}
+
+.navbar-brand span {
+  font-size: 35px;
+  font-weight: 700;
+  margin-left: -1rem;
+  font-family: "Aref Ruqaa Ink", serif;
+  color: var(--azure-blue);
+}
+
+.nav-link,
+.auth .btn {
+  font-weight: 700;
+  font-family: "Source Sans Pro";
+  font-size: 25px;
+}
+
+.nav-link,
+.auth .btn:first-child {
+  color: black;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.nav-link.active {
+  color: var(--azure-blue);
+}
+
+.auth .btn:last-child {
+  padding: 1.25rem 2.5rem;
+  border-radius: 15px;
+}

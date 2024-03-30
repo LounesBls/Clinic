@@ -1,0 +1,14 @@
+* {
+  font-family: "Source Sans Pro";
+  box-sizing: border-box;
+}
+
+:root {
+  --silver-sky: #ebeffa;
+  --azure-blue: #0070cd;
+
+  --card-bg: #F5F5F5;
+  --primary-text-color: #000;
+
+  --section-padding: 31px 90px;
+}
