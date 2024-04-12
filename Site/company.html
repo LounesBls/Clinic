@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('111.png');
+      background-size: cover; /* Ensure the background covers the entire viewport without distortion */
+      background-repeat: no-repeat; /* Prevent background image from repeating */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    form {
+      width: 300px;
+      padding: 20px;
+      border-radius: 0 150px 0 0; /* Larger border radius for the top-right corner */
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h1 {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .code-input,
+    .name-input {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .code-input input,
+    .name-input input {
+      width: calc(20% - 5px); /* Reduce the width of the number boxes */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 16px;
+    }
+    .name-input input {
+      width: calc(100% - 12px); /* Make the name input wider */
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 0; /* Removed border radius for the bottom part */
+      border-top-left-radius: 50px; /* Adjusting top-left corner */
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+/* Styles for the home button */
+.home-button {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Adjusted to position the button on the right */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  .home-button:hover {
+    background-color: #0056b3;
+  }
+  </style>
+  
+  
+</head>
+<body>
+  <a href="index.html" class="home-button">Home</a>
+
+  <form action="done.html" method="post">
+    <h1>Clinic</h1> <!-- Moved the title to the top of the form -->
+    <p>Patient’s medical file(Company)</p>
+    <label for="name">National Number</label>
+    <div class="name-input">
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    </div>
+    
+    <label for="company_code">Company's Code:</label>
+    <div class="code-input">
+      <input type="text" maxlength="1" pattern="[0-9]" required>
+      <input type="text" maxlength="1" pattern="[0-9]" required>
+      <input type="text" maxlength="1" pattern="[0-9]" required>
+      <input type="text" maxlength="1" pattern="[0-9]" required>
+    </div>
+
+    <label for="client_code">Code for Client:</label>
+    <div class="code-input">
+      <input type="text" maxlength="1" pattern="[0-9]" required>
+      <input type="text" maxlength="1" pattern="[0-9]" required>
+      <input type="text" maxlength="1" pattern="[0-9]" required>
+      <input type="text" maxlength="1" pattern="[0-9]" required>
+    </div>
+
+    <input type="submit" value="Submit">
+  </form>
+  <script>
+    // Get all input elements
+    const inputs = document.querySelectorAll('.code-input input');
+
+    // Add event listener to each input for arrow key navigation
+    inputs.forEach((input, index) => {
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+          if (index < inputs.length - 1) {
+            inputs[index + 1].focus();
+          }
+        } else if (e.key === 'ArrowLeft') {
+          if (index > 0) {
+            inputs[index - 1].focus();
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

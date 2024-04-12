@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('000.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    /* CSS to center elements */
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      text-align: center;
+    }
+    h1 {
+      font-size: 50px;
+    }
+    /* CSS styles for buttons */
+    button {
+      padding: 20px 30px;
+      font-size: 35px;
+      background-color: #0070CD; /* Red color */
+      color: #ffffff;
+      border: none;
+      border-radius: 50px; /* Curved edge */
+      cursor: pointer;
+      margin: 30px;
+      width: 600px;
+    }
+
+    button:hover {
+      background-color: #0056b3; /* Darker red on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Patient’s Medical File</h1>
+    <!-- Button 1 -->
+    <button onclick="window.location.href='single.html'">
+      Single
+    </button>
+    <br>
+    <!-- Button 2 -->
+    <button onclick="window.location.href='company.html'">
+      Company
+    </button>
+  </div>
+</body>
+</html>

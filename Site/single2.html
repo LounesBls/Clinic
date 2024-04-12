@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single 2</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('222.png');
+      background-size: cover; /* Ensure the background covers the entire viewport without distortion */
+      background-repeat: no-repeat; /* Prevent background image from repeating */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    /* Styles for the form */
+  /* Styles for the form */
+  form {
+    width: 330px;
+    padding: 20px;
+    border-radius: 0 150px 0 0; /* Larger border radius for the top-right corner */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="number"],
+  select,
+  input[type="date"] {
+    width: calc(100% - 22px); /* Adjusted width to accommodate for padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+  }
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0; /* Removed border radius for the bottom part */
+    border-top-left-radius: 50px; /* Adjusting top-left corner */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  /* Style for horizontal inputs */
+  .horizontal-inputs {
+    display: flex;
+    justify-content: space-between;
+  }
+  .horizontal-inputs div {
+    width: calc(50% - 5px);
+  }
+    /* Styles for the home button */
+.home-button {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Adjusted to position the button on the right */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  .home-button:hover {
+    background-color: #0056b3;
+  }
+  </style>
+  
+  
+  
+</head>
+<body>
+  <a href="index.html" class="home-button">Home</a>
+
+  <form action="done.html" method="post">
+    <h1>Clinic</h1> <!-- Moved the title to the top of the form -->
+    <p>Patient’s medical file(Single)</p>
+
+    <label for="blood_type">Blood Type</label>
+    <select id="blood_type" name="blood_type" required>
+      <option value="">Select Blood Type</option>
+      <option value="A+">A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+    </select>
+
+    <div class="horizontal-inputs">
+      <div>
+        <label for="pressure">Pressure</label>
+        <input type="number" id="pressure" name="pressure" placeholder="Enter your blood pressure" required>
+      </div>
+      <div>
+        <label for="diabetes">Diabetes</label>
+        <input type="text" id="diabetes" name="diabetes" placeholder="Enter your diabetes status" required>
+      </div>
+    </div>
+
+    <div class="horizontal-inputs">
+      <div>
+        <label for="emergency_number">Emergency Number</label>
+        <input type="text" id="emergency_number" name="emergency_number" placeholder="Enter emergency contact number" required>
+      </div>
+      <div>
+        <label for="another_number">Another Number</label>
+        <input type="text" id="another_number" name="another_number" placeholder="Enter another contact number" required>
+      </div>
+    </div>
+
+    <label for="pathology_history">Pathology History (Date)</label>
+    <input type="date" id="pathology_history" name="pathology_history" required>
+
+    <input type="submit" value="Submit">
+</form>
+
+
+  <script>
+    // Get all input elements
+    const inputs = document.querySelectorAll('.code-input input');
+
+    // Add event listener to each input for arrow key navigation
+    inputs.forEach((input, index) => {
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+          if (index < inputs.length - 1) {
+            inputs[index + 1].focus();
+          }
+        } else if (e.key === 'ArrowLeft') {
+          if (index > 0) {
+            inputs[index - 1].focus();
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
