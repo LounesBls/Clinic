@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- main css file -->
+    <link rel="stylesheet" href="./map.css">
+
+    <!-- Icon -->
+    <link href="../../images/logo.png" rel="icon" type="icon/png" />
+
+    <title>Clinic - Mapping Location</title>
+</head>
+
+<body>
+
+    <!-- Map -->
+    <div class="map position-relative d-flex justify-content-center">
+        <div class="input-group position-absolute flex-wrap" style="max-width: 841px; max-height: 55px; gap: 8px;">
+
+            <input type="text" class="form-control" placeholder="search for Doctor, Clinic or Hospital"
+                aria-label="Index Name" aria-describedby="basic-addon2"
+                style="height: 55px; border-radius: 8px; border: 2px solid #838F96; background: #F6F6F6CF;">
+
+            <button class="btn input-group-text fliterBTN" type="button" data-bs-toggle="collapse"
+                data-bs-target="#BTNCollapse" aria-expanded="false" aria-controls="BTNCollapse"
+                style="border-radius: 8px; border: 2px solid #838F96; background: #F6F6F6CF; max-height: 53px;">
+
+                <svg width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16.75 15.5V28.305C16.815 28.7925 16.6525 29.3125 16.2787 29.6537C16.1284 29.8044 15.9498 29.9239 15.7532 30.0055C15.5567 30.087 15.3459 30.129 15.1331 30.129C14.9203 30.129 14.7095 30.087 14.513 30.0055C14.3164 29.9239 14.1378 29.8044 13.9875 29.6537L10.7212 26.3875C10.544 26.2142 10.4092 26.0023 10.3275 25.7684C10.2457 25.5344 10.2192 25.2847 10.25 25.0388V15.5H10.2012L0.841219 3.5075C0.577332 3.16874 0.458261 2.73929 0.510024 2.31301C0.561787 1.88673 0.780176 1.49826 1.11747 1.2325C1.42622 1.005 1.76747 0.875 2.12497 0.875H24.875C25.2325 0.875 25.5737 1.005 25.8825 1.2325C26.2198 1.49826 26.4382 1.88673 26.4899 2.31301C26.5417 2.73929 26.4226 3.16874 26.1587 3.5075L16.7987 15.5H16.75Z"
+                        fill="#4C3FD7" />
+                </svg>
+            </button>
+
+            <div class="collapse collBtn" id="BTNCollapse" style="
+                    width: 295px;
+                    height: 312px;
+                    border-radius: 8px;
+                    background-color: #fff;
+                    padding: 10px 15px 4rem;
+                    position: absolute;
+                    top: 4rem; right: 0;">
+
+                <div class="d-flex flex-column gap-3">
+
+                    <h3 class="fw-normal d-flex align-items-center justify-content-between"
+                        style="font-size: 20px; line-height: 25px;">Filter
+                        <button type="button" class="btn-close X-btn" aria-label="Close"
+                            style="height: 9px; width: 9px;"></button>
+                    </h3>
+
+
+                    <div class="radio">
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioHospital">
+                            <label class="form-check-label" for="radioHospital"
+                                style="font-size: 12px; line-height: 15px;">
+                                Hospital
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioClinic">
+                            <label class="form-check-label" for="radioClinic"
+                                style="font-size: 12px; line-height: 15px;">
+                                Clinic
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioEmergency">
+                            <label class="form-check-label" for="radioEmergency"
+                                style="font-size: 12px; line-height: 15px;">
+                                Emergency
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div class="distance">
+                        <h5 class="fw-normal" style="font-size: 14px; line-height: 17px;">Distance</h5>
+
+                        <div class="mt-4 position-relative">
+                            <span class="triangle position-absolute" style="display: block;
+                                    background: #3325D7;
+                                    border: 13px solid transparent;
+                                    top: -15.5px;
+                                    left: 21%;
+                                    border-top: 13px solid #fff;
+                                    border-left: 13px solid #fff;
+                                    border-right: 13px solid #fff;"></span>
+
+                            <!-- Display Distance Here By Km Unit -->
+                            <span
+                                class="square position-absolute d-flex justify-content-center align-items-center text-white"
+                                style="
+                                    width: 19px;
+                                    height: 15px;
+                                    background: #3325D7;
+                                    top: -5px;
+                                    left: 24%;
+                                    font-size: 4px;">12.5Km</span>
+                            <!-- Line -->
+                            <svg width="235" height="6" viewBox="0 0 235 6" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 3.5H234" stroke="#3325D7" stroke-linecap="round" />
+                                <circle cx="53" cy="3" r="3" fill="#4C3FD7" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn fw-normal text-white align-self-center"
+                        style="font-size: 14px; line-height: 17px; background: #3325D7; padding: 2px 73px 2px 76px; border-radius: 4px;">Filter</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+
+    <!-- Main Map js FIle -->
+    <script src="map.js" defer>
+    </script>
+</body>
+
+</html>

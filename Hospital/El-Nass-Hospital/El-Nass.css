@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.active,
+main article ul li a:hover {
+    color: #3325D7 !important;
+}
+
+/* Medium Screen */
+@media (max-width: 991.9px) {
+    main nav {
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+}
+
+/* Small */
+@media (max-width: 767.9px) {
+    main {
+        padding: 10px 15px !important;
+    }
+
+    main nav {
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+
+    main article ul {
+        margin-right: 0 !important;
+        padding-right: 1rem !important;
+    }
+}
