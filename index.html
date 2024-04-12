@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="style/home3.css" />
   <!-- Home 5 CSS -->
   <link rel="stylesheet" href="style/home5.css" />
+  <!-- Contact Us -->
+  <link rel="stylesheet" href="style/contact.css">
 
   <!-- Icon -->
   <link href="images/logo.png" rel="icon" type="icon/png" />
@@ -77,13 +79,13 @@
             <a class="nav-link" href="#doctors">Doctors</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pharmacy.html">Pharmacy</a>
+            <a class="nav-link" href="Pharmacy/pharmacy.html">Pharmacy</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="supplies.html">Supplies</a>
+            <a class="nav-link" href="supplies/supplies.html">Supplies</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Platform</a>
+            <a class="nav-link" href="Platform/platform.html">Platform</a>
           </li>
         </ul>
 
@@ -96,6 +98,7 @@
       </div>
     </div>
   </nav>
+  <!-- End navbar -->
 
   <main>
     <!-- landing -->
@@ -233,7 +236,7 @@
 
     <!-- Home 3&4 / Our Services -->
     <section id="our-specialists">
-      <div class="container">
+      <div class="container" id="doctors">
         <div class="heading">
           <h2>Our Specialists</h2>
         </div>
@@ -248,9 +251,9 @@
             </button>
           </div>
 
-          <div class="carousel-inner">
+          <div class="carousel-inner mx-auto">
 
-            <div class="carousel-item active">
+            <div class="carousel-item ps-3 overflow-hidden active">
               <div class="row gap-3">
                 <div class="card col-lg-3 col-md-4 col-sm-6">
                   <img src="./images/specialits/doc_1.png" class="card-img-top" alt="Doctors picture">
@@ -330,7 +333,7 @@
               </div>
             </div>
 
-            <div class="carousel-item">
+            <div class="carousel-item ps-3 overflow-hidden">
               <div class="row gap-3 ml-3">
                 <div class="card col-lg-3 col-md-4 col-sm-6">
                   <img src="./images/specialits/doc_5.png" class="card-img-top" alt="Doctors picture">
@@ -426,29 +429,197 @@
           <h2>Patient Testimonials</h2>
         </div>
 
-        <!-- Card -->
-        <div class="card rounded-10 mx-auto " style="max-width: 540px;">
-          <div class="row left g-0">
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content.
-                  This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
+        <div class="card flex-wrap">
+          <!-- Card -->
+          <div class="col-md-8 col-sm-12 left">
+            <!-- Quation -->
+            <div class="quatation">
+              <span>‘‘</span>
             </div>
-            <div class="col-md-4">
-              <img src="./images/Patient-Testimonials.png" class="img-fluid ratio ratio-1x1"
-                alt="Patient-Testimonials Picture">
+
+            <!-- Card Text -->
+            <div class="card-body">
+              <p class="card-text">
+                Lorem Ipsum is simply dummy text of the
+                printing and typesetting industry.
+                Lorem Ipsum has been standard dummy text.</p>
+              <small class="text-muted">Ahmed Youssef</small>
             </div>
+
+            <!-- Arrows -->
+            <div class="arrows">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="arrow-left">
+                <path
+                  d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z">
+                </path>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z">
+                </path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div class="col-md-4 d-flex justify-content-end right">
+            <img src="./images/Patient-Testimonials.png" class="img-fluid" alt="Patient-Testimonials Picture">
           </div>
         </div>
       </div>
     </div>
-    <!-- Home 5 / Patient Testimonials -->
+    <!-- End Home 5 / Patient Testimonials -->
+
+    <!-- Contact Us -->
+    <div class="contact">
+      <div class="container">
+        <!-- Heading -->
+        <div class="heading">
+          <h2>Contact Us</h2>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="row justify-content-evenly">
+          <div class="col-lg-3 col-md-4 col-sm-12 image">
+            <img src="./images/doctor-contact.png" alt="doctor">
+            <span></span>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="#" class="row flex-column g-3">
+
+              <div class="col-lg-4 w-100">
+                <label for="validationCustom01" class="form-label">Name</label>
+                <input type="text" class="form-control rounded-4" id="validationCustom01" required>
+              </div>
+
+              <div class="col-lg-4 w-100">
+                <label for="validationCustom02" class="form-label">Email</label>
+                <input type="email" class="form-control" id="validationCustom02" required>
+              </div>
+
+              <div class="col-lg-3 w-100">
+                <label for="validationCustom03" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" id="validationCustom03" required>
+              </div>
+
+              <div class="col-12 btnn text-center pt-4">
+                <button class="btn btn-primary py-3 px-5" type="submit">Contact Us</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Contact Us -->
 
   </main>
+
+  <!-- Footer -->
+  <footer class="container-fluid mx-auto row pb-5 mt-5" style="background-color: #FFFFFF; padding: 16px 90px;">
+    <div class="col-lg-4 col-md-12">
+      <a style="width: fit-content" class="navbar-brand d-flex align-items-end" href="/">
+        <img class="w-24" style="width: 96px" src="images/logo.png" alt="logo">
+        <span>Clinic</span>
+      </a>
+
+      <div style="font-size: 25px; margin-left: 3rem">
+        We appreciate helping you in any medical department you need at any
+        time and anywhere
+      </div>
+
+      <div class="mt-5 d-flex justify-content-lg-start justify-content-center mb-5 mb-lg-0" style="gap: 15px">
+        <a href="https://fb.com" target="_blank" style="
+                  display: block;
+                  width: 80px;
+                  height: 80px;
+                  background-color: var(--azure-blue);
+                  border-radius: 999px;
+                  display: grid;
+                  place-items: center;
+                ">
+          <img style="display: block; width: 40px" src="images/facebook.png" alt="facebook-icon">
+        </a>
+
+        <a href="https://goo.gle/" target="_blank" style="
+                  display: block;
+                  width: 80px;
+                  height: 80px;
+                  background-color: var(--azure-blue);
+                  border-radius: 999px;
+                  display: grid;
+                  place-items: center;
+                ">
+          <img style="display: block; width: 40px; height: 40px" src="images/google (1).png" alt="google-icon">
+        </a>
+
+        <a href="https://instagr.am/" target="_blank" style="
+                  display: block;
+                  width: 80px;
+                  height: 80px;
+                  background-color: var(--azure-blue);
+                  border-radius: 999px;
+                  display: grid;
+                  place-items: center;
+                ">
+          <img style="display: block; width: 40px; height: 40px" src="images/instagram.png" alt="instagram-icon">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 text-center">
+      <div style="font-size: 30px; font-weight: 700; margin-bottom: 25px">
+        Services
+      </div>
+
+      <ul class="p-0 navbar-nav d-flex align-items-center">
+        <li class="navbar-item">
+          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="/pharmacy.html">
+            Pharmacy
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="#">
+            Supplies
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="#">
+            Hospital
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="#">
+            Platform
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+      <div class="text-lg-start text-center mx-lg-2 mx-0"
+        style="font-size: 30px; font-weight: 700; margin-bottom: 25px">
+        Get in touch
+      </div>
+
+      <ul class="p-0 navbar-nav d-flex align-items-center align-items-lg-start" style="font-size: 25px">
+        <li class="navbar-item">
+          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="tel:+201206115962">
+            (+20) 120 611 5962
+          </a>
+        </li>
+
+        <li class="navbar-item">
+          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="mailto:hayatyasser160@gmail.com">
+            hayatyasser160@gmail.com
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <!-- End Footer -->
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
