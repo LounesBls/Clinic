@@ -1,3 +1,6 @@
+/* Root */
+@import url('../style/var.css');
+
 * {
   font-family: "Source Sans Pro";
   box-sizing: border-box;
