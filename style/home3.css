@@ -14,13 +14,15 @@
 }
 
 /* Heading Section */
+.heading {
+    margin-bottom: 4rem;
+}
 
 .heading h2 {
     font-size: 50px;
     font-weight: 700;
     line-height: 62.85px;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 @media (max-width: 500px) {
@@ -34,7 +36,6 @@
 /* Slider */
 #our-specialists .row .card {
     width: 300.99px;
-    /* height: 663px; */
     border-radius: 25px;
     padding: 0;
     background-color: var(--card-bg);
