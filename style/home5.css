@@ -7,24 +7,87 @@
     padding: var(--section-padding);
 }
 
+
 .patient-testimonials .card {
     background-color: var(--card-bg);
     box-shadow: 0px 4px 4px 0px #00000040;
     border-radius: 45px;
-    ;
-    /* width: 1260px;
-    height: 534px; */
+    flex-direction: row;
+    padding: 34px 24px;
 }
 
-.patient-testimonials img {
+@media (max-width: 991.9px) {
+    .patient-testimonials .card {
+        flex-direction: column;
+    }
+}
+
+.patient-testimonials .left {
+    display: flex;
+    flex-direction: column;
+}
+
+.patient-testimonials .quatation {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 87.99px;
+    text-align: left;
+
+    span {
+        color: #0070CD;
+    }
+}
+
+.patient-testimonials .left .card-text {
+    font-weight: 400;
+    line-height: 50.28px;
+    text-align: left;
+    font-size: 40px;
+}
+
+.patient-testimonials .card-body small {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 31.43px;
+    text-align: left;
+}
+
+.patient-testimonials .arrows {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5rem;
+}
+
+.patient-testimonials .left .arrows svg {
+    width: 65px;
+    transition: rotate(180deg);
+}
+
+.patient-testimonials .left .arrows svg:hover path {
+    fill: #0070CD;
+}
+
+.patient-testimonials .left .arrows .arrow-left {
+    transform: rotate(180deg);
+}
+
+.patient-testimonials .right img {
     border-radius: 20px;
+    width: 360px;
 }
 
-.patient-testimonials.left {
-    width: 766px;
-    height: 454px;
-    /* top: 34px;
-    left: 23px;
-    gap: 0px;
-    opacity: 0px; */
+@media (max-width: 991.9px) {
+    .patient-testimonials .left {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .patient-testimonials .right {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .patient-testimonials .right img {
+        width: 100% !important;
+    }
 }
