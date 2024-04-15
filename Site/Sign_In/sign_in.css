@@ -1,0 +1,77 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Aref Ruqaa Ink", serif;
+}
+
+main {
+    position: relative;
+    height: fit-content;
+    /* background-image: url('./sing-in.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
+}
+
+main>img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+@media (max-width: 466.2px) {
+    main .child {
+        padding: 1rem !important;
+    }
+
+    main .last-child h3 {
+        font-size: 25px !important;
+    }
+
+    main .last-child h4 {
+        font-size: 22px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 0 2.5rem;
+    }
+
+    main .child {
+        width: 100%;
+    }
+
+    main .child .first-child {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    main .child .first-child svg,
+    main .child .last-child {
+        width: 100% !important;
+        height: fit-content !important;
+    }
+}
+
+@media (min-width: 1073px) {
+    main .child {
+        padding: 2.3rem 5rem 2.5rem 1rem !important;
+    }
+}
+
+@media (max-width: 1076.9px) {
+    main .child {
+        display: block !important;
+    }
+
+    main .child .last-child {
+        margin: 0 auto;
+    }
+}
