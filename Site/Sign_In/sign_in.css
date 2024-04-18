@@ -11,10 +11,6 @@
 main {
     position: relative;
     height: fit-content;
-    /* background-image: url('./sing-in.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; */
 }
 
 main>img {
