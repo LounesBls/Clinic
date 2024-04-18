@@ -63,6 +63,21 @@
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
       }
     }
+
+    .camSVGBTN {
+      gap: 26px;
+      padding-right: 26px !important;
+    }
+
+    .camSVGBTN img {
+      background-color: var(--silver-sky);
+      padding: 20px;
+    }
+
+    .camSVGBTN span {
+      font-size: 25px;
+      color: var(--azure-blue);
+    }
   </style>
 
   <!-- Logo Font -->
@@ -106,10 +121,8 @@
         </ul>
 
         <div class="auth">
-          <button class="btn">Sign in</button>
-          <button class="btn btn-primary" style="background-color: var(--azure-blue)">
-            Sign up
-          </button>
+          <a class="btn" href="Site/Sign_In/sign-in.html" style="color: #000;">Sign in</a>
+          <a class="btn btn-primary" href="/Site/index.html" style="background-color: var(--azure-blue)">Sign up</a>
         </div>
       </div>
     </div>
@@ -131,7 +144,6 @@
       </div>
 
       <div class="d-flex flex-wrap" style="gap: 20px 46px">
-        <!-- ! This is the real btn -->
 
         <button class="btn p-0 d-flex align-items-center prescriptionBTN"
           style="gap: 26px; padding-right: 26px !important">
@@ -142,34 +154,13 @@
           </span>
         </button>
 
-        <!-- ! This is the real btn -->
-
-        <!--  -->
-        <!-- <button class="btn p-0 d-flex align-items-center prescription" type="button" data-bs-toggle="collapse"
-          data-bs-target="#pharmacyExample" aria-expanded="false" aria-controls="pharmacyExample">
-          <img class="d-inline-block rounded-circle" style="background-color: var(--silver-sky); padding: 20px"
-            src="../images/icons/prescription-icon.png" alt="prescription-icon" />
-          <span style="font-size: 25px; color: var(--azure-blue)">
-            Prescription or claim
-          </span>
-        </button>
-
-        <div class="collapse" id="pharmacyExample">
-          <div class="card card-body">
-            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the
-            user
-            activates the relevant trigger.
-          </div>
-        </div> -->
-        <!--  -->
-        <button class="btn p-0 d-flex align-items-center camSVGBTN" style="gap: 26px; padding-right: 26px !important">
-          <img class="d-inline-block rounded-circle overflow-visible"
-            style="background-color: var(--silver-sky); padding: 20px" src="../images/icons/camera-icon.png"
+        <label class="btn p-0 d-flex align-items-center camSVGBTN">
+          <input type="file" style="display: none;">
+          <img class="d-inline-block rounded-circle overflow-visible" src="../images/icons/camera-icon.png"
             alt="prescription-icon" />
-          <span style="font-size: 25px; color: var(--azure-blue)">
-            Prescription or claim
-          </span>
-        </button>
+          <span>Prescription or claim</span>
+        </label>
+
       </div>
     </div>
   </article>
