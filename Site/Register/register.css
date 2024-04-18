@@ -1,0 +1,72 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+@import url('../../style/var.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Source Code Pro", monospace;
+}
+
+label:hover {
+    color: var(--azure-blue) !important;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+}
+
+@media (max-width: 500px) {
+    main .media .sign-up button {
+        font-size: 18px !important;
+        line-height: 30px !important;
+    }
+
+    main .main-form h4 {
+        line-height: 33px !important;
+        font-size: 20px !important;
+    }
+
+    main .gender>div {
+        gap: .75rem !important;
+    }
+
+    main .butn button {
+        width: 232px !important;
+    }
+
+    main .butn p {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 800px) {
+    main form {
+        padding-left: 0 !important;
+    }
+
+    main .butn {
+        padding-left: 0 !important;
+    }
+}
+
+@media (max-width: 992px) {
+    main article {
+        width: 90% !important;
+        transition: all .3s ease-in-out;
+    }
+}
+
+@media (max-width: 1400px) {
+    main>svg {
+        display: none;
+    }
+}
+
+@media (max-width: 1400px) {
+    main>svg {
+        left: 3rem !important;
+    }
+}
