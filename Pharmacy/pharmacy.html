@@ -78,6 +78,10 @@
       font-size: 25px;
       color: var(--azure-blue);
     }
+
+    .pharmacy-products-two .card:hover {
+      cursor: pointer
+    }
   </style>
 
   <!-- Logo Font -->
@@ -128,12 +132,48 @@
     </div>
   </nav>
 
+  <!-- ِProducts Carousel -->
+  <div class="container mb-3 px-5">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="../images/categories/hair-care.png" class="d-block w-100" alt="Image Product"
+            style="border-radius: 4rem; height: 600px;">
+        </div>
+
+        <div class="carousel-item">
+          <img src="../images/categories/mother-and-baby.png" class="d-block w-100" alt="Image Product"
+            style="border-radius: 4rem; height: 600px;">
+        </div>
+
+        <div class="carousel-item">
+          <img src="../images/categories/prescription-medicine.png" class="d-block w-100" alt="Image Product"
+            style="border-radius: 4rem; height: 600px;">
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <!-- ِProducts Carousel -->
+
   <!-- Article -->
   <article class="container-xxl px-5 mx-auto row pb-4">
     <div>
       <p class="heading" style="font-size: 30px;">
         Get your medicine to your medicine to your location
       </p>
+
       <div class="border border-dark d-flex form-label-group overflow-hidden"
         style="margin: 26px 0; border-radius: 15px">
         <label for="search" style="padding: 27px 20px 27px 35px">
@@ -161,6 +201,28 @@
           <span>Prescription or claim</span>
         </label>
 
+        <!-- basket -->
+        <div class="dropdown d-flex align-items-center" id="basket" style="gap:26px;">
+
+          <button class="btn rounded-circle border-0" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="background-color: var(--silver-sky); padding: 20px;">
+
+            <svg width="34" height="41" viewBox="0 0 34 41" fill="none" xmlns="http://www.w3.org/2000/svg" style="
+                                      cursor: pointer;">
+              <path
+                d="M4.94287 31.3333C6.00374 31.3333 7.02115 31.7899 7.7713 32.6025C8.52144 33.4152 8.94287 34.5174 8.94287 35.6667C8.94287 36.8159 8.52144 37.9181 7.7713 38.7308C7.02115 39.5435 6.00374 40 4.94287 40C3.88201 40 2.86459 39.5435 2.11444 38.7308C1.3643 37.9181 0.942871 36.8159 0.942871 35.6667C0.942871 34.5174 1.3643 33.4152 2.11444 32.6025C2.86459 31.7899 3.88201 31.3333 4.94287 31.3333ZM4.94287 31.3333H26.9429M4.94287 31.3333V1H0.942871M26.9429 31.3333C28.0037 31.3333 29.0212 31.7899 29.7713 32.6025C30.5214 33.4152 30.9429 34.5174 30.9429 35.6667C30.9429 36.8159 30.5214 37.9181 29.7713 38.7308C29.0212 39.5435 28.0037 40 26.9429 40C25.882 40 24.8646 39.5435 24.1144 38.7308C23.3643 37.9181 22.9429 36.8159 22.9429 35.6667C22.9429 34.5174 23.3643 33.4152 24.1144 32.6025C24.8646 31.7899 25.882 31.3333 26.9429 31.3333ZM4.94287 5.33333L32.9429 7.5L30.9429 22.6667H4.94287"
+                stroke="#0070cd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+          <span style="font-size: 25px; color: var(--azure-blue)">
+            Basket
+          </span>
+
+          <!-- Products -->
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton"
+            style="inset: 1rem auto auto -3rem !important;"></ul>
+        </div>
+
       </div>
     </div>
   </article>
@@ -171,44 +233,59 @@
     <div class="container-xxl p-5">
       <h4 class="fw-normal" style="font-size: 30px; line-height: 37px;">Search by category</h4>
 
-      <div class="d-grid justify-content-center text-center" style="
+      <div class="d-grid justify-content-center text-center pharmacy-products-one" style="
             margin-top: 24px;
             gap: 26px;
             grid-template-columns: repeat(auto-fill, 390px);
           ">
-        <a href="#" class="bg-white overflow-hidden text-decoration-none" style="border-radius: 25px">
-          <img style="height: 270px" class="object-fit-cover w-100" src="../images/categories/prescription-medicine.png"
-            alt="" />
-          <div class="py-2" style="font-size: 26px">
-            Prescription Medicine
+
+        <div class="card border-0" style="border-radius: 25px; cursor: pointer;">
+          <img style="border-bottom-left-radius: 0; border-bottom-right-radius: 0; height: 296px; "
+            src="../images/categories/prescription-medicine.png" alt="Product Image" class="card-img">
+          <div class="card-body">
+            <p class="card-title mb-0" style="font-size: 26px">Prescription Medicine</p>
           </div>
-        </a>
-        <a href="#" class="bg-white overflow-hidden text-decoration-none" style="border-radius: 25px">
-          <img style="height: 270px" class="object-fit-cover w-100" src="../images/categories/hair-care.png" alt="" />
-          <div class="py-2" style="font-size: 26px">Hair Care</div>
-        </a>
-        <a href="#" class="bg-white overflow-hidden text-decoration-none" style="border-radius: 25px">
-          <img style="height: 270px" class="object-fit-cover w-100"
-            src="../images/categories/vitimins-and-nutrition.png" alt="" />
-          <div class="py-2" style="font-size: 26px">
-            Vitimins and Nutrition
+        </div>
+
+        <div class="card border-0" style="border-radius: 25px; cursor: pointer;">
+          <img style="border-bottom-left-radius: 0; border-bottom-right-radius: 0; height: 296px;"
+            src="../images/categories/hair-care.png" alt="Product Image" class="card-img">
+          <div class="card-body">
+            <p class="card-title mb-0" style="font-size: 26px">Hair Care</p>
           </div>
-        </a>
-        <a href="#" class="bg-white overflow-hidden text-decoration-none" style="border-radius: 25px">
-          <img style="height: 270px" class="object-fit-cover w-100" src="../images/categories/mother-and-baby.png"
-            alt="" />
-          <div class="py-2" style="font-size: 26px">Mother and Baby</div>
-        </a>
-        <a href="#" class="bg-white overflow-hidden text-decoration-none" style="border-radius: 25px">
-          <img style="height: 270px" class="object-fit-cover w-100" src="../images/categories/self-medicine.png"
-            alt="" />
-          <div class="py-2" style="font-size: 26px">Self Medicine</div>
-        </a>
-        <a href="#" class="bg-white overflow-hidden text-decoration-none" style="border-radius: 25px">
-          <img style="height: 270px" class="object-fit-cover w-100" src="../images/categories/covud-essentials.png"
-            alt="" />
-          <div class="py-2" style="font-size: 26px">Covud Essentials</div>
-        </a>
+        </div>
+
+        <div class="card border-0" style="border-radius: 25px; cursor: pointer;">
+          <img style="border-bottom-left-radius: 0; border-bottom-right-radius: 0; height: 296px;"
+            src="../images/categories/vitimins-and-nutrition.png" alt="Product Image" class="card-img">
+          <div class="card-body">
+            <p class="card-title mb-0" style="font-size: 26px">Vitimins and Nutrition</p>
+          </div>
+        </div>
+
+        <div class="card border-0" style="border-radius: 25px; cursor: pointer;">
+          <img style="border-radius: 25px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; height: 296px;"
+            src="../images/categories/mother-and-baby.png" alt="Product Image" class="card-img">
+          <div class="card-body">
+            <p class="card-title mb-0" style="font-size: 26px">Mother and Baby</p>
+          </div>
+        </div>
+
+        <div class="card border-0" style="border-radius: 25px; cursor: pointer;">
+          <img style="border-radius: 25px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; height: 296px;"
+            src="../images/categories/self-medicine.png" alt="Product Image" class="card-img">
+          <div class="card-body">
+            <p class="card-title mb-0" style="font-size: 26px">Self Medicine</p>
+          </div>
+        </div>
+
+        <div class="card border-0" style="border-radius: 25px; cursor: pointer;">
+          <img style="border-radius: 25px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; height: 296px;"
+            src="../images/categories/covud-essentials.png" alt="Product Image" class="card-img">
+          <div class="card-body">
+            <p class="card-title mb-0" style="font-size: 26px">Covud Essentials</p>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -228,13 +305,13 @@
         </svg>
       </p>
 
-      <div class="d-grid justify-content-center text-center" style="
+      <div class="d-grid justify-content-center text-center pharmacy-products-two" style="
             margin-top: 24px;
             gap: 26px;
             grid-template-columns: repeat(auto-fill, 390px);">
 
         <div class="card" style="border-radius: 25px;">
-          <img src="./Aspirin_2.png" class="card-img-top" alt="Aspirin Image" style="
+          <img src="Aspirin_2.png" class="card-img" alt="Aspirin Image" style="
             height: 167px;
             border-radius: 25px 25px 0 0">
 
@@ -263,7 +340,7 @@
         </div>
 
         <div class="card" style="border-radius: 25px;">
-          <img src="./Aspirin_2.png" class="card-img-top" alt="Aspirin Image" style="
+          <img src="Aspirin_2.png" class="card-img" alt="Aspirin Image" style="
             height: 167px;
             border-radius: 25px 25px 0 0">
 
@@ -292,7 +369,7 @@
         </div>
 
         <div class="card" style="border-radius: 25px;">
-          <img src="./Aspirin_2.png" class="card-img-top" alt="Aspirin Image" style="
+          <img src="Aspirin_2.png" class="card-img" alt="Aspirin Image" style="
             height: 167px;
             border-radius: 25px 25px 0 0">
 
@@ -321,7 +398,7 @@
         </div>
 
         <div class="card" style="border-radius: 25px;">
-          <img src="./Aspirin_2.png" class="card-img-top" alt="Aspirin Image" style="
+          <img src="Aspirin_2.png" class="card-img" alt="Aspirin Image" style="
             height: 167px;
             border-radius: 25px 25px 0 0">
 
@@ -350,7 +427,7 @@
         </div>
 
         <div class="card" style="border-radius: 25px;">
-          <img src="./Aspirin_2.png" class="card-img-top" alt="Aspirin Image" style="
+          <img src="Aspirin_2.png" class="card-img" alt="Aspirin Image" style="
             height: 167px;
             border-radius: 25px 25px 0 0">
 
@@ -379,7 +456,7 @@
         </div>
 
         <div class="card" style="border-radius: 25px;">
-          <img src="./Aspirin_2.png" class="card-img-top" alt="Aspirin Image" style="
+          <img src="Aspirin_2.png" class="card-img" alt="Aspirin Image" style="
             height: 167px;
             border-radius: 25px 25px 0 0">
 
