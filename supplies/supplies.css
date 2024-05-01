@@ -251,8 +251,16 @@ nav .navbar-collapse ul li {
     display: flex;
 }
 
+/* carousel */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: var(--azure-blue);
+    transition: .2s ease-in-out;
+}
 
-.container>section::before,
+/* carousel */
+
+/* .container>section::before,
 .container>section::after {
     content: '';
     background-color: #A1A1A1;
@@ -260,9 +268,9 @@ nav .navbar-collapse ul li {
     width: 50%;
     height: 30px;
     position: absolute;
-}
+} */
 
-.container>section::before {
+/* .container>section::before {
     top: -1.6rem;
     left: 0px;
     transform: skewY(3deg);
@@ -274,11 +282,11 @@ nav .navbar-collapse ul li {
     right: 0rem;
     transform: skewY(-2.7deg);
     transform-origin: top left;
-}
+} */
 
 /* Shape Media */
 /* X-small Screen */
-@media (max-width: 767.9px) {
+/* @media (max-width: 767.9px) {
     .container>section::before {
         top: 0rem;
         left: 0px;
@@ -290,10 +298,10 @@ nav .navbar-collapse ul li {
         right: 0rem;
         transform: skewY(-6.7deg);
     }
-}
+} */
 
 /* XX-small Screen */
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
     .container>section::before {
         top: 0rem;
         left: 0px;
@@ -305,10 +313,10 @@ nav .navbar-collapse ul li {
         right: 0rem;
         transform: skewY(-8.5deg);
     }
-}
+} */
 
 /* small Screen */
-@media (min-width: 767.9px) {
+/* @media (min-width: 767.9px) {
     .container>section::before {
         top: 0rem;
         left: 0px;
@@ -320,10 +328,10 @@ nav .navbar-collapse ul li {
         right: 0rem;
         transform: skewY(-5deg);
     }
-}
+} */
 
 /* medium Screen */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .container>section::before {
         top: 0rem;
         left: 0px;
@@ -335,10 +343,10 @@ nav .navbar-collapse ul li {
         right: 0rem;
         transform: skewY(-5deg);
     }
-}
+} */
 
 /* Large Screen */
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
     .container>section::before {
         top: 0rem;
         left: 0px;
@@ -350,4 +358,4 @@ nav .navbar-collapse ul li {
         right: 0rem;
         transform: skewY(-3deg);
     }
-}
+} */
