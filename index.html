@@ -49,6 +49,14 @@
       font-family: "Source Sans Pro", sans-serif;
       color: black;
     }
+
+    .show {
+      display: flex !important;
+      background-color: #6c757dc7;
+      flex-wrap: wrap;
+      align-content: center;
+      height: 100%;
+    }
   </style>
 
   <!-- Logo Font -->
@@ -87,6 +95,9 @@
           <li class="nav-item">
             <a class="nav-link" href="Platform/platform.html">Platform</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Articles/Articles.html">Articles</a>
+          </li>
         </ul>
 
         <div class="auth">
@@ -98,7 +109,7 @@
   </nav>
   <!-- End navbar -->
 
-  <main>
+  <main class="position-relative">
     <!-- landing -->
     <section class="container-xxl px-5 mx-auto row">
       <div class="mt-5 mt-md-0 col-md-6 order-2 order-md-1 d-flex flex-column justify-content-center">
@@ -113,9 +124,9 @@
           standard dummy text
         </div>
 
-        <button class="landing__button border-0 text-white w-fit">
+        <a href="#doctors" class="landing__button border-0 text-white text-decoration-none w-fit">
           See Doctors
-        </button>
+        </a>
       </div>
 
       <div class="col-md-6 order-1 order-md-2">
@@ -239,20 +250,21 @@
           <h2>Our Specialists</h2>
         </div>
 
-        <div id="carouselExampleCaptions" class="carousel slide pb-5" data-bs-ride="carousel">
+        <div id="carouselCaptions" class="carousel slide pb-5" data-bs-ride="carousel">
 
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active"
               aria-current="true" aria-label="Slide 1">
             </button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2">
+            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2">
             </button>
           </div>
 
-          <div class="carousel-inner mx-auto">
+          <div class="carousel-inner mx-auto position-relative">
 
             <div class="carousel-item ps-3 overflow-hidden active">
               <div class="row gap-3">
+
                 <div class="card col-lg-3 col-md-4 col-sm-6">
                   <img src="./images/specialits/doc_1.png" class="card-img-top" alt="Doctors picture">
                   <div class="card-body">
@@ -262,13 +274,22 @@
                       Lorem Ipsum is simply dummy text of
                       the printing and typesetting
                       industry. Lorem Ipsum has been
-                      the industry's standard dummy textl.</p>
-                    <a href="#">Learn More
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                          d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
-                      </svg>
-                    </a>
+                      the industry's standard dummy textl.
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                      <div onclick='togglePopup()'
+                        class="moreInfo d-flex align-items-center text-nowrap fw-normal lg-base"
+                        style="font-size: 20px; color: var(--azure-blue); cursor: pointer;">Learn More
+                        <!-- svg -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                          style="width: 2rem; font-weight: 400; margin-left: 1rem; cursor: pointer;">
+                          <path style="fill: var(--azure-blue);"
+                            d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+                        </svg>
+                      </div>
+                      <a href="./Product Info/productInfo.html" target="_blank" type="button">Book Now</a>
+                    </div>
                   </div>
                 </div>
 
@@ -281,13 +302,22 @@
                       Lorem Ipsum is simply dummy text of
                       the printing and typesetting
                       industry. Lorem Ipsum has been
-                      the industry's standard dummy textl.</p>
-                    <a href="#">Learn More
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                          d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
-                      </svg>
-                    </a>
+                      the industry's standard dummy textl.
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                      <div onclick='togglePopup()'
+                        class="moreInfo d-flex align-items-center text-nowrap fw-normal lg-base"
+                        style="font-size: 20px; color: var(--azure-blue); cursor: pointer;">Learn More
+                        <!-- svg -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                          style="width: 2rem; font-weight: 400; margin-left: 1rem; cursor: pointer;">
+                          <path style="fill: var(--azure-blue);"
+                            d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+                        </svg>
+                      </div>
+                      <a href="./Product Info/productInfo.html" target="_blank" type="button">Book Now</a>
+                    </div>
                   </div>
                 </div>
 
@@ -300,13 +330,22 @@
                       Lorem Ipsum is simply dummy text of
                       the printing and typesetting
                       industry. Lorem Ipsum has been
-                      the industry's standard dummy textl.</p>
-                    <a href="#">Learn More
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                          d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
-                      </svg>
-                    </a>
+                      the industry's standard dummy textl.
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                      <div onclick='togglePopup()'
+                        class="moreInfo d-flex align-items-center text-nowrap fw-normal lg-base"
+                        style="font-size: 20px; color: var(--azure-blue); cursor: pointer;">Learn More
+                        <!-- svg -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                          style="width: 2rem; font-weight: 400; margin-left: 1rem; cursor: pointer;">
+                          <path style="fill: var(--azure-blue);"
+                            d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+                        </svg>
+                      </div>
+                      <a href="./Product Info/productInfo.html" target="_blank" type="button">Book Now</a>
+                    </div>
                   </div>
                 </div>
 
@@ -319,13 +358,22 @@
                       Lorem Ipsum is simply dummy text of
                       the printing and typesetting
                       industry. Lorem Ipsum has been
-                      the industry's standard dummy textl.</p>
-                    <a href="#">Learn More
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                          d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
-                      </svg>
-                    </a>
+                      the industry's standard dummy textl.
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                      <div onclick='togglePopup()'
+                        class="moreInfo d-flex align-items-center text-nowrap fw-normal lg-base"
+                        style="font-size: 20px; color: var(--azure-blue); cursor: pointer;">Learn More
+                        <!-- svg -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                          style="width: 2rem; font-weight: 400; margin-left: 1rem; cursor: pointer;">
+                          <path style="fill: var(--azure-blue);"
+                            d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+                        </svg>
+                      </div>
+                      <a href="./Product Info/productInfo.html" target="_blank" type="button">Book Now</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -333,22 +381,32 @@
 
             <div class="carousel-item ps-3 overflow-hidden">
               <div class="row gap-3 ml-3">
-                <div class="card col-lg-3 col-md-4 col-sm-6">
+
+                <div class="card col-lg-3 col-md-5 col-sm-6">
                   <img src="./images/specialits/doc_5.png" class="card-img-top" alt="Doctors picture">
                   <div class="card-body">
-                    <h3 class="card-title">Dr.Yasmen ahmed</h3>
+                    <h3 class="card-title">Dr.Yasmen Ahmed</h3>
                     <h5 class="card-title">Expert: Physical Health</h5>
                     <p class="card-text">
                       Lorem Ipsum is simply dummy text of
                       the printing and typesetting
                       industry. Lorem Ipsum has been
-                      the industry's standard dummy textl.</p>
-                    <a href="#">Learn More
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                          d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
-                      </svg>
-                    </a>
+                      the industry's standard dummy textl.
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                      <div onclick='togglePopup()'
+                        class="moreInfo d-flex align-items-center text-nowrap fw-normal lg-base"
+                        style="font-size: 20px; color: var(--azure-blue); cursor: pointer;">Learn More
+                        <!-- svg -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                          style="width: 2rem; font-weight: 400; margin-left: 1rem; cursor: pointer;">
+                          <path style="fill: var(--azure-blue);"
+                            d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+                        </svg>
+                      </div>
+                      <a href="./Product Info/productInfo.html" target="_blank" type="button">Book Now</a>
+                    </div>
                   </div>
                 </div>
 
@@ -361,13 +419,22 @@
                       Lorem Ipsum is simply dummy text of
                       the printing and typesetting
                       industry. Lorem Ipsum has been
-                      the industry's standard dummy textl.</p>
-                    <a href="#">Learn More
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                          d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
-                      </svg>
-                    </a>
+                      the industry's standard dummy textl.
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                      <div onclick='togglePopup()'
+                        class="moreInfo d-flex align-items-center text-nowrap fw-normal lg-base"
+                        style="font-size: 20px; color: var(--azure-blue); cursor: pointer;">Learn More
+                        <!-- svg -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                          style="width: 2rem; font-weight: 400; margin-left: 1rem; cursor: pointer;">
+                          <path style="fill: var(--azure-blue);"
+                            d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+                        </svg>
+                      </div>
+                      <a href="./Product Info/productInfo.html" target="_blank" type="button">Book Now</a>
+                    </div>
                   </div>
                 </div>
 
@@ -380,13 +447,22 @@
                       Lorem Ipsum is simply dummy text of
                       the printing and typesetting
                       industry. Lorem Ipsum has been
-                      the industry's standard dummy textl.</p>
-                    <a href="#">Learn More
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                          d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
-                      </svg>
-                    </a>
+                      the industry's standard dummy textl.
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                      <div onclick='togglePopup()'
+                        class="moreInfo d-flex align-items-center text-nowrap fw-normal lg-base"
+                        style="font-size: 20px; color: var(--azure-blue); cursor: pointer;">Learn More
+                        <!-- svg -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                          style="width: 2rem; font-weight: 400; margin-left: 1rem; cursor: pointer;">
+                          <path style="fill: var(--azure-blue);"
+                            d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+                        </svg>
+                      </div>
+                      <a href="./Product Info/productInfo.html" target="_blank" type="button">Book Now</a>
+                    </div>
                   </div>
                 </div>
 
@@ -399,15 +475,77 @@
                       Lorem Ipsum is simply dummy text of
                       the printing and typesetting
                       industry. Lorem Ipsum has been
-                      the industry's standard dummy textl.</p>
-                    <a href="#">Learn More
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                          d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
-                      </svg>
-                    </a>
+                      the industry's standard dummy textl.
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                      <div onclick='togglePopup()'
+                        class="moreInfo d-flex align-items-center text-nowrap fw-normal lg-base"
+                        style="font-size: 20px; color: var(--azure-blue); cursor: pointer;">Learn More
+                        <!-- svg -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                          style="width: 2rem; font-weight: 400; margin-left: 1rem; cursor: pointer;">
+                          <path style="fill: var(--azure-blue);"
+                            d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+                        </svg>
+                      </div>
+                      <a href="./Product Info/productInfo.html" target="_blank" type="button">Book Now</a>
+                    </div>
                   </div>
                 </div>
+
+              </div>
+            </div>
+
+            <!-- ! If doctors haven't clinic add disabled to > Able to Reseve and Go To Clinic Button <  -->
+            <div id="popup" class="position-absolute d-none w-100" style="left: -0.5rem; top: 0; ">
+
+              <div class="card d-flex flex-row w-100 mx-auto"
+                style="height: 480px; background-color: var(--card-bg); width: 95% !important; border-radius: 25px;">
+                <div class="card-body p-4">
+                  <h2>Hello EveryOne</h2>
+                  <h3 class="card-title fw-normal t-one"></h3>
+                  <h5 class="card-title fw-normal t-two"></h5>
+                  <div>
+                    <h6 class="fw-normal fs-4">Reserve:</h6>
+
+                    <div class="form-check mb-2">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDeAble"
+                        data-bs-toggle="collapse" data-bs-target="#collapsePrice" aria-expanded="false"
+                        aria-controls="collapsePrice">
+                      <label class="form-check-label fw-normal" style="cursor: pointer; font-size: 1.2rem;"
+                        for="flexRadioDeAble">
+                        Able To Reserve
+                      </label>
+
+                      <div class="collapse bg-transparent" id="collapsePrice">
+                        <div class="cb-two col-sm-6 card card-body rounded-3"
+                          style="padding: 1rem; height: fit-content; background-color: var(--card-bg);">
+                          <p class="mb-2 fw-bold">Clinik: <span class="fw-normal">ClinicPrice</span> EGP</p>
+                          <p class="mb-2 fw-bold">Home: <span class="fw-normal">HomePrice</span> EGP</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-check mb-2">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioNotAble"
+                        checked>
+                      <label class="form-check-label fw-normal" style="cursor: pointer; font-size: 1.2rem;"
+                        for="flexRadioNotAble">
+                        Not Able To Reserve
+                      </label>
+                    </div>
+                  </div>
+                  <a role="button" class="btn text-decoration-none text-white mt-4"
+                    href="https://maps.app.goo.gl/zeP1rWEW87vugH5Z8" target="_blank" style="
+                          padding: 1rem 3rem;
+                          border-radius: 1.5rem;
+                          font-weight: 700;
+                          font-size: 25px;
+                          background-color: var(--azure-blue);">Go TO
+                    Clinic</a>
+                </div>
+                <img src="" alt="doctor image" class="card-img popup-img w-50 h-100"
+                  style="border-top-right-radius: 25px; border-bottom-right-radius: 25px; border-top-left-radius: 0;">
               </div>
             </div>
 
@@ -417,7 +555,6 @@
       </div>
     </section>
     <!-- End Home 3&4 / Our Services -->
-
 
     <!-- Home 5 / Patient Testimonials -->
     <div class="patient-testimonials">
@@ -574,22 +711,23 @@
 
       <ul class="p-0 navbar-nav d-flex align-items-center">
         <li class="navbar-item">
-          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="/pharmacy.html">
+          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="./Pharmacy/pharmacy.html">
             Pharmacy
           </a>
         </li>
         <li class="navbar-item">
-          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="#">
+          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="./supplies/supplies.html">
             Supplies
           </a>
         </li>
         <li class="navbar-item">
-          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="#">
+          <a class="nav-link" style="font-size: 25px; font-weight: 400"
+            href="./Hospital/El-Nass-Hospital/El-NassHospital.html">
             Hospital
           </a>
         </li>
         <li class="navbar-item">
-          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="#">
+          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="./Platform/platform.html">
             Platform
           </a>
         </li>
@@ -623,6 +761,28 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+
+  <script>
+    const popup = document.getElementById('popup');
+    const titleOne = document.querySelector('.t-one');
+    const titleTwo = document.querySelector('.t-two');
+    const popupImg = document.querySelector('.popup-img');
+
+    function togglePopup() {
+      popup.classList.toggle('show');
+    }
+
+    popup.addEventListener('click', () => popup.classList.toggle('show'));
+
+    document.querySelectorAll('.moreInfo').forEach((click) => {
+      click.addEventListener('click', (e) => {
+        // Fill PopUp.
+        titleOne.innerHTML = `I'm ${e.target.closest('.card').children[1].children[0].textContent}`;
+        titleTwo.innerHTML = e.target.closest('.card').children[1].children[1].textContent;
+        popupImg.src = e.target.closest('.card').children[0].src;
+      })
+    });
+  </script>
 </body>
 
 </html>
