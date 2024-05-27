@@ -15,36 +15,63 @@ clickTwo.addEventListener( 'click' , ()=>{
 
 
 document.addEventListener('DOMContentLoaded', ()=> {
-    // Add Videos To Basket
-    function addToBasket (productImage){
-        const basketList = document.querySelector('basketUl');
-        const li = document.createElement('li');
-
-        // Card
+    // Create Card
+    const createCard = (productImage) => {
+        // card
         const card = document.createElement('div');
         card.classList.add('card');
         card.style = 'position-relative';
+        
+        // Img
+        const cardImg = document.createElement('img');
+        cardImg.classList.add('card-img');
+        cardImg.src = productImage;
+        cardImg.style = 'width: 185px; height: 175px;';
+        card.appendChild(cardImg);
 
-        // Create Product Image.
-        const prdImg = document.createElement('img');
-        prdImg.classList.add('card-img');
-        prdImg.src= productImage;
+        // Create Play Svg
+        const svg = document.createElement('svg'); 
+        svg.classList.add('position-absolute');
+        svg.style = `width="67" height="52" viewBox="0 0 67 52" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" style="
+                        poistion: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 4rem;
+                        height: 4rem;
+                        background: #000000bd;
+                        border-radius: 50%;
+                        transform: translate(-50%, -50%);
+                        "`;
 
-        // Create Play Circle
-        const  playCircle = document.createElement('div');
-        playCircle.style = 'background-color: #000; width: 1.5rem; height: 1.5rem; display: flex; align-content: center;'
+        svg.innerHTML = `<ellipse cx="33.5" cy="26" rx="33.5" ry="26" fill="black" fill-opacity="0.78"/>`;
+        card.appendChild(svg);
+        
+        // Create Triangle SVg
+        const svgTwo = document.createElement('span');
+        svgTwo.style = `
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-top: 15px solid transparent;
+                    border-bottom: 15px solid transparent;
+                    border-right: 0px solid transparent;
+                    border-left: 21px solid #fff;
+                    margin-left: 3px;
+                    `;
+        card.appendChild(svgTwo);
+        return card;
+    };
 
-        // Create Triangle
-        const  triangle = document.createElement('svg');
-        triangle.innerHTML = `
-            <svg width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);">
-                <path d="M22.5386 13.49L1.28538 27.6868L0.319946 0.857414L22.5386 13.49Z" fill="white"></path>
-            </svg>`;
-        playCircle.appendChild(triangle)
+    // Add Videos To Basket
+    function addToBasket (productImage){
+        const basketList = document.querySelector('#basketUl');
+        const li = document.createElement('li');
+        li.classList.add('dropdown-item');
+        li.style = "display: flex; flex-direction: row-reverse;";
+
+        const card = createCard(productImage);
 
         // Add delete button
         const deleteBtn = document.createElement('button');
@@ -53,19 +80,18 @@ document.addEventListener('DOMContentLoaded', ()=> {
         deleteBtn.addEventListener('click', () => li.remove());
 
         // Append Elements
-        card.appendChild(playCircle)
-        card.appendChild(prdImg);
         li.appendChild(card);
         li.appendChild(deleteBtn);
         basketList.appendChild(li);
     };
 
     // Add Event To Products.
-    const product = document.querySelectorAll('.row .play');
-    product.forEach(video => ()=>{
-        video.addEvenetListener('click', ()=>{
-            const productImage = video.querySelector('card-img-bottom').src;
+    const product = document.querySelectorAll('.card-body .Add_Basket');
+    product.forEach((vid) =>{
+        vid.addEventListener('click', (e)=>{
+            // Get Image Src.
+            const productImage = e.target.closest('.card').querySelector('.card-img-bottom').src;
             addToBasket(productImage);
         });
-    })
+    });
 })
