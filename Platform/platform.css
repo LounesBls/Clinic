@@ -15,6 +15,19 @@
     margin-top: .0;
 }
 
+.card .Add_Basket {
+    display: none;
+    transition: .3s ease-in-out;
+}
+
+.card .Add_Basket:hover {
+    transform: scale(2) rotate(90deg);
+}
+
+.card .card-body:hover .Add_Basket {
+    display: block;
+}
+
 /* ! Especialy For Pop-Ups*/
 @media (max-width: 893.9px) {
     nav .container-xxl .click_2 .collapse {
@@ -111,5 +124,18 @@
 
     .modal-body div:nth-child(2) div {
         gap: 10px !important;
+    }
+
+    nav .IB {
+        flex-direction: column-reverse !important;
+        align-items: flex-start !important;
+        gap: 0 !important;
+    }
+}
+
+/*  */
+@media (min-width: 768px) {
+    footer {
+        padding: 16px 90px !important;
     }
 }
