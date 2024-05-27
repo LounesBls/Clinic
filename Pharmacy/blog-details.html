@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <title>Prescription</title>
+
+    <!-- Style -->
+    <style>
+        .show {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .card-body {
+                padding-top: 2rem !important;
+            }
+        }
+
+        @media (min-width: 992px) {
+            #navbarSupportedContent {
+                justify-content: flex-end;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div data-wow-duration="2s" data-wow-delay="0.5s"
+        class="navbar navbar-expand-lg  position-fixed w-100 top-0  bg-white ps-5"
+        style=" z-index: 100;box-shadow: 0px 4px 8px 0px #0070cd4f;" id="box1">
+        <a class="navbar-brand" style="color: var(--azure-blue); font-size: xx-large;" href="#">The Article </a>
+        <button class="nav-link btn">
+            <!-- <img src="assets/images/eng.png" style="width: 20px; background-color:var(--azure-blue);border-radius: 5px;"
+              alt="الوضع الفاتح"> -->
+        </button>
+        <button class="nav-link btn" id="dark-mode-toggle">
+            <!-- <img class="al" src="assets/images/light-mode.png"
+              style="width: 20px; background-color:var(--azure-blue);border-radius: 5px;" alt="الوضع الفاتح"> -->
+        </button>
+
+        <button class="navbar-toggler  mr-md-4 me-sm-4" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation" style="background-color: aliceblue;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar -->
+        <div class="collapse navbar-collapse justify-content-end" style="margin-right: 40px;"
+            id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link fw-bold px-2 mx-2"
+                        style="font-size: 25px; font-family: 'Source Sans Pro', sans-serif; color: #000"
+                        href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold px-2 mx-2"
+                        style="font-size: 25px; font-family: 'Source Sans Pro', sans-serif; color: #000;"
+                        href="../#doctors">Doctors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold px-2 mx-2"
+                        style="font-size: 25px; font-family: 'Source Sans Pro', sans-serif; color: #000;"
+                        href="../Pharmacy/pharmacy.html">Pharmacy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold px-2 mx-2"
+                        style="font-size: 25px; font-family: 'Source Sans Pro', sans-serif; color: #000;"
+                        href="../supplies/supplies.html">Supplies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold px-2 mx-2"
+                        style="font-size: 25px; font-family: 'Source Sans Pro', sans-serif; color: #000;"
+                        href="../Platform/platform.html">Platform</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold px-2"
+                        style="color: #000; font-size: 25px; font-family: 'Source Sans Pro' , sans-serif;"
+                        aria-current="page" href="../Articles/Articles.html">Articles</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Navbar -->
+    </div>
+
+    <!-- Content -->
+    <div class="container" style="margin-top: 9rem;">
+        <ul class="list-group">
+            <li class="list-group-item" type="button" data-bs-toggle="collapse" data-bs-target="#Med-1"
+                aria-expanded="true" aria-controls="Med-1">
+                Medication 1 - Lorem ipsum dolor sit amet
+
+                <div class="collapse align-items-start justify-content-center flex-md-nowrap show" style="gap: 1.5rem;"
+                    id="Med-1">
+                    <div class="col-md-4">
+                        <img src="Aspirin_2.png" class="card-img-top mt-3" alt="Aspirin Image"
+                            style="height: 270px; border-radius: 25px; ">
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Aspirin Protect 100mg 20 tablets</h5>
+                            <p class="card-text">Prescription: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Proin eget velit vestibulum, aliquam felis nec, sodales dolor. Phasellus bibendum, dolor
+                                vitae tincidunt lacinia.</p>
+                            <div class="embed-responsive embed-responsive-16by9 w-100">
+                                <h5>How To Take:</h5>
+                                <iframe class="embed-responsive-item w-100" style="height: 15rem;"
+                                    src="https://www.youtube.com/embed/VIDEO_ID_HERE" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item">Other Medications </li>
+
+            <li class="list-group-item" type="button" data-bs-toggle="collapse" data-bs-target="#Med-2"
+                aria-expanded="false" aria-controls="Med-2">
+                Medication 2 - Lorem ipsum dolor sit amet
+                <div class="collapse align-items-start justify-content-center" style="height: 1.5rem;" id="Med-2">
+                    <div class="col-md-4">
+                        <img src="../images/categories/prescription-medicine.png" class="card-img-top mt-3"
+                            alt="Aspirin Image" style="height: 270px; border-radius: 25px; ">
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Aspirin Protect 100mg 20 tablets</h5>
+                            <p class="card-text">Prescription: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Proin eget velit vestibulum, aliquam felis nec, sodales dolor. Phasellus bibendum, dolor
+                                vitae tincidunt lacinia.</p>
+                            <div class="embed-responsive embed-responsive-16by9 w-100">
+                                <h5>How To Take:</h5>
+                                <iframe class="embed-responsive-item w-100" style="height: 15rem;"
+                                    src="https://www.youtube.com/embed/VIDEO_ID_HERE" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item" type="button" data-bs-toggle="collapse" data-bs-target="#Med-3"
+                aria-expanded="false" aria-controls="Med-3">
+                Medication 3 - Lorem ipsum dolor sit amet
+                <div class="collapse align-items-start justify-content-center" style="height: 1.5rem;" id="Med-3">
+                    <div class="col-md-4">
+                        <img src="../images/categories/hair-care.png" class="card-img-top mt-3" alt="Aspirin Image"
+                            style="height: 270px; border-radius: 25px; ">
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Aspirin Protect 100mg 20 tablets</h5>
+                            <p class="card-text">Prescription: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Proin eget velit vestibulum, aliquam felis nec, sodales dolor. Phasellus bibendum, dolor
+                                vitae tincidunt lacinia.</p>
+                            <div class="embed-responsive embed-responsive-16by9 w-100">
+                                <h5>How To Take:</h5>
+                                <iframe class="embed-responsive-item w-100" style="height: 15rem;"
+                                    src="https://www.youtube.com/embed/VIDEO_ID_HERE" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item" type="button" data-bs-toggle="collapse" data-bs-target="#Med-4"
+                aria-expanded="false" aria-controls="Med-4">
+                Medication 4 - Lorem ipsum dolor sit amet
+                <div class="collapse align-items-start justify-content-center" style="height: 1.5rem;" id="Med-4">
+                    <div class="col-md-4">
+                        <img src="../images/categories/vitimins-and-nutrition.png" class="card-img-top mt-3"
+                            alt="Aspirin Image" style="height: 270px; border-radius: 25px; ">
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Aspirin Protect 100mg 20 tablets</h5>
+                            <p class="card-text">Prescription: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Proin eget velit vestibulum, aliquam felis nec, sodales dolor. Phasellus bibendum, dolor
+                                vitae tincidunt lacinia.</p>
+                            <div class="embed-responsive embed-responsive-16by9 w-100">
+                                <h5>How To Take:</h5>
+                                <iframe class="embed-responsive-item w-100" style="height: 15rem;"
+                                    src="https://www.youtube.com/embed/VIDEO_ID_HERE" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item" type="button" data-bs-toggle="collapse" data-bs-target="#Med-5"
+                aria-expanded="false" aria-controls="Med-5">
+                Medication 5 - Lorem ipsum dolor sit amet
+                <div class="collapse align-items-start justify-content-center" style="height: 1.5rem;" id="Med-5">
+                    <div class="col-md-4">
+                        <img src="../images/categories/mother-and-baby.png" class="card-img-top mt-3"
+                            alt="Aspirin Image" style="height: 270px; border-radius: 25px; ">
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Aspirin Protect 100mg 20 tablets</h5>
+                            <p class="card-text">Prescription: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Proin eget velit vestibulum, aliquam felis nec, sodales dolor. Phasellus bibendum, dolor
+                                vitae tincidunt lacinia.</p>
+                            <div class="embed-responsive embed-responsive-16by9 w-100">
+                                <h5>How To Take:</h5>
+                                <iframe class="embed-responsive-item w-100" style="height: 15rem;"
+                                    src="https://www.youtube.com/embed/VIDEO_ID_HERE" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item" type="button" data-bs-toggle="collapse" data-bs-target="#Med-6"
+                aria-expanded="false" aria-controls="Med-6">
+                Medication 6 - Lorem ipsum dolor sit amet
+                <div class="collapse align-items-start justify-content-center" style="height: 1.5rem;" id="Med-6">
+                    <div class="col-md-4">
+                        <img src="../images/categories/self-medicine.png" class="card-img-top mt-3" alt="Aspirin Image"
+                            style="height: 270px; border-radius: 25px; ">
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Aspirin Protect 100mg 20 tablets</h5>
+                            <p class="card-text">Prescription: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Proin eget velit vestibulum, aliquam felis nec, sodales dolor. Phasellus bibendum, dolor
+                                vitae tincidunt lacinia.</p>
+                            <div class="embed-responsive embed-responsive-16by9 w-100">
+                                <h5>How To Take:</h5>
+                                <iframe class="embed-responsive-item w-100" style="height: 15rem;"
+                                    src="https://www.youtube.com/embed/VIDEO_ID_HERE" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item" type="button" data-bs-toggle="collapse" data-bs-target="#Med-7"
+                aria-expanded="false" aria-controls="Med-7">
+                Medication 7 - Lorem ipsum dolor sit amet
+                <div class="collapse align-items-start justify-content-center" style="height: 1.5rem;" id="Med-7">
+                    <div class="col-md-4">
+                        <img src="../images/categories/covud-essentials.png" class="card-img-top mt-3"
+                            alt="Aspirin Image" style="height: 270px; border-radius: 25px; ">
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Aspirin Protect 100mg 20 tablets</h5>
+                            <p class="card-text">Prescription: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Proin eget velit vestibulum, aliquam felis nec, sodales dolor. Phasellus bibendum, dolor
+                                vitae tincidunt lacinia.</p>
+                            <div class="embed-responsive embed-responsive-16by9 w-100">
+                                <h5>How To Take:</h5>
+                                <iframe class="embed-responsive-item w-100" style="height: 15rem;"
+                                    src="https://www.youtube.com/embed/VIDEO_ID_HERE" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid mx-auto row pb-5 mt-5" style="background-color: var(--silver-sky);">
+        <div class="col-lg-4 col-md-12">
+            <a style="width: fit-content" class="navbar-brand d-flex align-items-end" href="/">
+                <img class="w-24" style="width: 96px" src="../images/logo.png" alt="logo">
+                <span class="fw-bold" style='font-size: 35px;
+                    font-family: "Aref Ruqaa Ink", serif;'>Clinic</span>
+            </a>
+
+            <div style="font-size: 25px; margin-left: 3rem">
+                We appreciate helping you in any medical department you need at any
+                time and anywhere
+            </div>
+
+            <div class="mt-5 d-flex justify-content-lg-start justify-content-center mb-5 mb-lg-0" style="gap: 15px">
+                <a href="https://fb.com" target="_blank" style="
+                          display: block;
+                          width: 80px;
+                          height: 80px;
+                          background-color: var(--azure-blue);
+                          border-radius: 999px;
+                          display: grid;
+                          place-items: center;
+                        ">
+                    <img style="display: block; width: 40px" src="../images/facebook.png" alt="facebook-icon">
+                </a>
+
+                <a href="https://goo.gle/" target="_blank" style="
+                          display: block;
+                          width: 80px;
+                          height: 80px;
+                          background-color: var(--azure-blue);
+                          border-radius: 999px;
+                          display: grid;
+                          place-items: center;
+                        ">
+                    <img style="display: block; width: 40px; height: 40px" src="../images/google (1).png"
+                        alt="google-icon">
+                </a>
+
+                <a href="https://instagr.am/" target="_blank" style="
+                          display: block;
+                          width: 80px;
+                          height: 80px;
+                          background-color: var(--azure-blue);
+                          border-radius: 999px;
+                          display: grid;
+                          place-items: center;
+                        ">
+                    <img style="display: block; width: 40px; height: 40px" src="../images/instagram.png"
+                        alt="instagram-icon">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-center mt-sm-3">
+            <div style="font-size: 30px; font-weight: 700; margin-bottom: 25px">
+                Services
+            </div>
+
+            <ul class="p-0 navbar-nav d-flex align-items-center">
+                <li class="navbar-item">
+                    <a class="nav-link" style="font-size: 25px; font-weight: 400" href="../Pharmacy/pharmacy.html">
+                        Pharmacy
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a class="nav-link" style="font-size: 25px; font-weight: 400" href="../supplies/supplies.html">
+                        Supplies
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a class="nav-link" style="font-size: 25px; font-weight: 400"
+                        href="../Hospital/El-Nass-Hospital/El-NassHospital.html">
+                        Hospital
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a class="nav-link" style="font-size: 25px; font-weight: 400" href="../Platform/platform.html">
+                        Platform
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-sm-3">
+            <div class="text-lg-start text-center mx-lg-2 mx-0"
+                style="font-size: 30px; font-weight: 700; margin-bottom: 25px">
+                Get in touch
+            </div>
+
+            <ul class="p-0 navbar-nav d-flex align-items-center align-items-lg-start" style="font-size: 25px">
+                <li class="navbar-item">
+                    <a class="nav-link" style="font-size: 25px; font-weight: 400" href="tel:+201206115962">
+                        (+20) 120 611 5962
+                    </a>
+                </li>
+
+                <li class="navbar-item">
+                    <a class="nav-link" style="font-size: 25px; font-weight: 400"
+                        href="mailto:hayatyasser160@gmail.com">
+                        hayatyasser160@gmail.com
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>

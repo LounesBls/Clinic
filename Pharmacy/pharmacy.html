@@ -79,8 +79,49 @@
       color: var(--azure-blue);
     }
 
-    .pharmacy-products-two .card:hover {
+    /*  */
+    @media (min-width: 768px) {
+      footer {
+        padding: 16px 90px !important;
+      }
+    }
+
+    .pharmacy-products-one .card .pharmacy-products-two .card {
+      position: relative;
+    }
+
+    .pharmacy-products-one .card .add-to-basket,
+    .pharmacy-products-two .card .add-to-basket {
+      position: absolute;
+      width: 2.5rem;
+      height: 2.5rem;
+      right: 1rem;
+      top: 1rem;
+      border-radius: 50%;
+      transition: .3s ease-in-out;
+      display: none;
+    }
+
+    .pharmacy-products-one .card .add-to-basket:hover,
+    .pharmacy-products-two .card .add-to-basket:hover {
+      transform: scale(1.2) rotate(90deg);
+      font-size: 2.2rem !important;
+      background: #eee !important;
       cursor: pointer
+    }
+
+    .pharmacy-products-one .card:hover .add-to-basket,
+    .pharmacy-products-two .card:hover .add-to-basket {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.3rem;
+      font-weight: 600;
+      background: #fff;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      top: .8rem;
+      right: .8rem;
     }
   </style>
 
@@ -103,6 +144,7 @@
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0" style="margin-left: auto">
           <li class="nav-item">
@@ -121,6 +163,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../Platform/platform.html">Platform</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Articles/Articles.html">Articles</a>
           </li>
         </ul>
 
@@ -239,53 +284,104 @@
             grid-template-columns: repeat(auto-fill, 390px);
           ">
 
-        <div class="card border-0" style="border-radius: 25px; cursor: pointer;">
-          <img style="border-bottom-left-radius: 0; border-bottom-right-radius: 0; height: 296px; "
-            src="../images/categories/prescription-medicine.png" alt="Product Image" class="card-img">
-          <div class="card-body">
-            <p class="card-title mb-0" style="font-size: 26px">Prescription Medicine</p>
-          </div>
+        <div class="card border-0 text-decoration-none" style="border-radius: 25px;">
+          <span class="add-to-basket">+</span>
+
+          <img style="
+                border-radius: inherit;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                height: 296px;" src="../images/categories/prescription-medicine.png" alt="Product Image"
+            class="card-img">
+
+          <a href="./blog-details.html" target="_blank" style="text-decoration: none; border-radius: 25px;">
+            <div class="card-body">
+              <p class="card-title mb-0" style="font-size: 26px">Prescription Medicine</p>
+            </div>
+          </a>
         </div>
 
-        <div class="card border-0" style="border-radius: 25px; cursor: pointer;">
-          <img style="border-bottom-left-radius: 0; border-bottom-right-radius: 0; height: 296px;"
-            src="../images/categories/hair-care.png" alt="Product Image" class="card-img">
-          <div class="card-body">
-            <p class="card-title mb-0" style="font-size: 26px">Hair Care</p>
-          </div>
+        <div class="card border-0 text-decoration-none" style="border-radius: 25px;">
+          <span class="add-to-basket">+</span>
+
+          <img style="
+                border-radius: inherit;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                height: 296px;" src="../images/categories/hair-care.png" alt="Product Image" class="card-img">
+
+          <a href="./blog-details.html" target="_blank" style="text-decoration: none; border-radius: 25px;">
+            <div class="card-body">
+              <p class="card-title mb-0" style="font-size: 26px">Hair Care</p>
+            </div>
+          </a>
         </div>
 
-        <div class="card border-0" style="border-radius: 25px; cursor: pointer;">
-          <img style="border-bottom-left-radius: 0; border-bottom-right-radius: 0; height: 296px;"
-            src="../images/categories/vitimins-and-nutrition.png" alt="Product Image" class="card-img">
-          <div class="card-body">
-            <p class="card-title mb-0" style="font-size: 26px">Vitimins and Nutrition</p>
-          </div>
+        <div class="card border-0 text-decoration-none" style="border-radius: 25px;">
+          <span class="add-to-basket">+</span>
+
+          <img style="
+                border-radius: inherit;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                height: 296px;" src="../images/categories/vitimins-and-nutrition.png" alt="Product Image"
+            class="card-img">
+
+          <a href="./blog-details.html" target="_blank" style="text-decoration: none; border-radius: 25px;">
+            <div class="card-body">
+              <p class="card-title mb-0" style="font-size: 26px">Vitimins and Nutrition</p>
+            </div>
+          </a>
         </div>
 
-        <div class="card border-0" style="border-radius: 25px; cursor: pointer;">
-          <img style="border-radius: 25px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; height: 296px;"
-            src="../images/categories/mother-and-baby.png" alt="Product Image" class="card-img">
-          <div class="card-body">
-            <p class="card-title mb-0" style="font-size: 26px">Mother and Baby</p>
-          </div>
+        <div class="card border-0 text-decoration-none" style="border-radius: 25px;">
+          <span class="add-to-basket">+</span>
+
+          <img style="
+                border-radius: inherit;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                height: 296px;" src="../images/categories/mother-and-baby.png" alt="Product Image" class="card-img">
+
+          <a href="./blog-details.html" target="_blank" style="text-decoration: none; border-radius: 25px;">
+            <div class="card-body">
+              <p class="card-title mb-0" style="font-size: 26px">Mother and Baby</p>
+            </div>
+          </a>
         </div>
 
-        <div class="card border-0" style="border-radius: 25px; cursor: pointer;">
-          <img style="border-radius: 25px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; height: 296px;"
-            src="../images/categories/self-medicine.png" alt="Product Image" class="card-img">
-          <div class="card-body">
-            <p class="card-title mb-0" style="font-size: 26px">Self Medicine</p>
-          </div>
+        <div class="card border-0 text-decoration-none" style="border-radius: 25px;">
+          <span class="add-to-basket">+</span>
+
+          <img style="
+                border-radius: inherit;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                height: 296px;" src="../images/categories/self-medicine.png" alt="Product Image" class="card-img">
+
+          <a href="./blog-details.html" target="_blank" style="text-decoration: none; border-radius: 25px;">
+            <div class="card-body">
+              <p class="card-title mb-0" style="font-size: 26px">Self Medicine</p>
+            </div>
+          </a>
         </div>
 
-        <div class="card border-0" style="border-radius: 25px; cursor: pointer;">
-          <img style="border-radius: 25px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; height: 296px;"
-            src="../images/categories/covud-essentials.png" alt="Product Image" class="card-img">
-          <div class="card-body">
-            <p class="card-title mb-0" style="font-size: 26px">Covud Essentials</p>
-          </div>
+        <div class="card border-0 text-decoration-none" style="border-radius: 25px;">
+          <span class="add-to-basket">+</span>
+
+          <img style="
+                border-radius: inherit;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                height: 296px;" src="../images/categories/covud-essentials.png" alt="Product Image" class="card-img">
+
+          <a href="./blog-details.html" target="_blank" style="text-decoration: none; border-radius: 25px;">
+            <div class="card-body">
+              <p class="card-title mb-0" style="font-size: 26px">Covud Essentials</p>
+            </div>
+          </a>
         </div>
+
       </div>
 
     </div>
@@ -311,6 +407,7 @@
             grid-template-columns: repeat(auto-fill, 390px);">
 
         <div class="card" style="border-radius: 25px;">
+          <span class="add-to-basket">+</span>
           <img src="Aspirin_2.png" class="card-img" alt="Aspirin Image" style="
             height: 167px;
             border-radius: 25px 25px 0 0">
@@ -325,7 +422,8 @@
 
             <div class="d-flex justify-content-between align-items-start">
 
-              <a href="#" type="button" class="text-decoration-none card-text text-capitalize fw-bold text-left" style="
+              <a href="./blog-details.html" type="button"
+                class="text-decoration-none card-text text-capitalize fw-bold text-left" style="
                 font-size: 25px;
                 line-height: 31.43px;">From 21 EGP</a>
 
@@ -340,6 +438,7 @@
         </div>
 
         <div class="card" style="border-radius: 25px;">
+          <span class="add-to-basket">+</span>
           <img src="Aspirin_2.png" class="card-img" alt="Aspirin Image" style="
             height: 167px;
             border-radius: 25px 25px 0 0">
@@ -354,7 +453,8 @@
 
             <div class="d-flex justify-content-between align-items-start">
 
-              <a href="#" type="button" class="text-decoration-none card-text text-capitalize fw-bold text-left" style="
+              <a href="./blog-details.html" type="button"
+                class="text-decoration-none card-text text-capitalize fw-bold text-left" style="
                 font-size: 25px;
                 line-height: 31.43px;">From 21 EGP</a>
 
@@ -369,6 +469,7 @@
         </div>
 
         <div class="card" style="border-radius: 25px;">
+          <span class="add-to-basket">+</span>
           <img src="Aspirin_2.png" class="card-img" alt="Aspirin Image" style="
             height: 167px;
             border-radius: 25px 25px 0 0">
@@ -383,7 +484,8 @@
 
             <div class="d-flex justify-content-between align-items-start">
 
-              <a href="#" type="button" class="text-decoration-none card-text text-capitalize fw-bold text-left" style="
+              <a href="./blog-details.html" type="button"
+                class="text-decoration-none card-text text-capitalize fw-bold text-left" style="
                 font-size: 25px;
                 line-height: 31.43px;">From 21 EGP</a>
 
@@ -398,6 +500,7 @@
         </div>
 
         <div class="card" style="border-radius: 25px;">
+          <span class="add-to-basket">+</span>
           <img src="Aspirin_2.png" class="card-img" alt="Aspirin Image" style="
             height: 167px;
             border-radius: 25px 25px 0 0">
@@ -412,7 +515,8 @@
 
             <div class="d-flex justify-content-between align-items-start">
 
-              <a href="#" type="button" class="text-decoration-none card-text text-capitalize fw-bold text-left" style="
+              <a href="./blog-details.html" type="button"
+                class="text-decoration-none card-text text-capitalize fw-bold text-left" style="
                 font-size: 25px;
                 line-height: 31.43px;">From 21 EGP</a>
 
@@ -427,6 +531,7 @@
         </div>
 
         <div class="card" style="border-radius: 25px;">
+          <span class="add-to-basket">+</span>
           <img src="Aspirin_2.png" class="card-img" alt="Aspirin Image" style="
             height: 167px;
             border-radius: 25px 25px 0 0">
@@ -441,7 +546,8 @@
 
             <div class="d-flex justify-content-between align-items-start">
 
-              <a href="#" type="button" class="text-decoration-none card-text text-capitalize fw-bold text-left" style="
+              <a href="./blog-details.html" type="button"
+                class="text-decoration-none card-text text-capitalize fw-bold text-left" style="
                 font-size: 25px;
                 line-height: 31.43px;">From 21 EGP</a>
 
@@ -456,6 +562,7 @@
         </div>
 
         <div class="card" style="border-radius: 25px;">
+          <span class="add-to-basket">+</span>
           <img src="Aspirin_2.png" class="card-img" alt="Aspirin Image" style="
             height: 167px;
             border-radius: 25px 25px 0 0">
@@ -470,7 +577,8 @@
 
             <div class="d-flex justify-content-between align-items-start">
 
-              <a href="#" type="button" class="text-decoration-none card-text text-capitalize fw-bold text-left" style="
+              <a href="./blog-details.html" type="button"
+                class="text-decoration-none card-text text-capitalize fw-bold text-left" style="
                 font-size: 25px;
                 line-height: 31.43px;">From 21 EGP</a>
 
@@ -487,6 +595,111 @@
     </div>
   </section>
   <!-- Prescription Medicine Section [Products]  -->
+
+  <!-- Footer -->
+  <footer class="container-fluid mx-auto row pb-5 mt-5" style="background-color: #FFFFFF;">
+    <div class="col-lg-4 col-md-12">
+      <a style="width: fit-content" class="navbar-brand d-flex align-items-end" href="/">
+        <img class="w-24" style="width: 96px" src="../images/logo.png" alt="logo">
+        <span>Clinic</span>
+      </a>
+
+      <div style="font-size: 25px; margin-left: 3rem">
+        We appreciate helping you in any medical department you need at any
+        time and anywhere
+      </div>
+
+      <div class="mt-5 d-flex justify-content-lg-start justify-content-center mb-5 mb-lg-0" style="gap: 15px">
+        <a href="https://fb.com" target="_blank" style="
+                    display: block;
+                    width: 80px;
+                    height: 80px;
+                    background-color: var(--azure-blue);
+                    border-radius: 999px;
+                    display: grid;
+                    place-items: center;
+                  ">
+          <img style="display: block; width: 40px" src="../images/facebook.png" alt="facebook-icon">
+        </a>
+
+        <a href="https://goo.gle/" target="_blank" style="
+                    display: block;
+                    width: 80px;
+                    height: 80px;
+                    background-color: var(--azure-blue);
+                    border-radius: 999px;
+                    display: grid;
+                    place-items: center;
+                  ">
+          <img style="display: block; width: 40px; height: 40px" src="../images/google (1).png" alt="google-icon">
+        </a>
+
+        <a href="https://instagr.am/" target="_blank" style="
+                    display: block;
+                    width: 80px;
+                    height: 80px;
+                    background-color: var(--azure-blue);
+                    border-radius: 999px;
+                    display: grid;
+                    place-items: center;
+                  ">
+          <img style="display: block; width: 40px; height: 40px" src="../images/instagram.png" alt="instagram-icon">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 text-center">
+      <div style="font-size: 30px; font-weight: 700; margin-bottom: 25px">
+        Services
+      </div>
+
+      <ul class="p-0 navbar-nav d-flex align-items-center">
+        <li class="navbar-item">
+          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="../Pharmacy/pharmacy.html">
+            Pharmacy
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="../supplies/supplies.html">
+            Supplies
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a class="nav-link" style="font-size: 25px; font-weight: 400"
+            href="../Hospital/El-Nass-Hospital/El-NassHospital.html">
+            Hospital
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="../Platform/platform.html">
+            Platform
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+      <div class="text-lg-start text-center mx-lg-2 mx-0"
+        style="font-size: 30px; font-weight: 700; margin-bottom: 25px">
+        Get in touch
+      </div>
+
+      <ul class="p-0 navbar-nav d-flex align-items-center align-items-lg-start" style="font-size: 25px">
+        <li class="navbar-item">
+          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="tel:+201206115962">
+            (+20) 120 611 5962
+          </a>
+        </li>
+
+        <li class="navbar-item">
+          <a class="nav-link" style="font-size: 25px; font-weight: 400" href="mailto:hayatyasser160@gmail.com">
+            hayatyasser160@gmail.com
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <!-- End Footer -->
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
