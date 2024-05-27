@@ -2,8 +2,19 @@
 
 .contact {
     background-color: var(--silver-sky);
-    padding: 37px 90px;
     margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .contact {
+        padding: 37px 90px;
+    }
+
+    .contact .row .image {
+        margin-right: 1.75rem;
+    }
+
+
 }
 
 .contact h2 {
@@ -21,7 +32,7 @@
 .contact .image {
     display: flex;
     justify-content: center;
-    margin-right: 1.75rem;
+
 }
 
 .contact img {
