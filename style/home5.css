@@ -4,7 +4,6 @@
 /* Home 5: patient-testimonials Section */
 .patient-testimonials {
     background-color: #fff;
-    padding: var(--section-padding);
 }
 
 
@@ -89,5 +88,16 @@
 
     .patient-testimonials .right img {
         width: 100% !important;
+    }
+}
+
+/*  */
+@media (min-width: 768px) {
+    .patient-testimonials {
+        padding: var(--section-padding);
+    }
+
+    footer {
+        padding: 16px 90px !important;
     }
 }
