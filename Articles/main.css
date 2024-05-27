@@ -1,10 +1,6 @@
 body {
-    background-color: rgba(7, 15, 15, 1);
-    color: white;
-}
-
-.navbar {
-    background-color: black;
+    /* background-color: rgba(7, 15, 15, 1); */
+    color: #000;
 }
 
 /* الوضع الفاتح - النمط النهاري */
@@ -93,7 +89,7 @@ body.light-mode {
     font-size: 16px;
     border-radius: 6px;
     background-color: darkgoldenrod;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
