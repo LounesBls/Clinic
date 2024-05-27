@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Nav -->
+    <link rel="stylesheet" href="../style/nav.css">
+
+    <!-- Var -->
+    <link rel="stylesheet" href="../style/var.css">
+
+    <!-- Icon -->
+    <link href="../images/logo.png" rel="icon" type="icon/png" />
+
+    <!-- Title -->
+    <title>Platform - Videos</title>
+
+    <!--  -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .video-list-item {
+            cursor: pointer;
+        }
+
+        .video-list-item:hover {
+            background-color: #f1f1f1;
+        }
+
+        .active-video {
+            background-color: #d1ecf1;
+        }
+
+        @media (max-width: 1199.9px) {
+            .navbar-toggler span {
+                width: 2.5rem;
+                height: .30rem;
+                display: block;
+                background: #000;
+                border-radius: 10px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-xl my-0">
+        <div class="container-xxl">
+            <a class="navbar-brand" href="#">
+                <span>Platform</span>
+            </a>
+            <button class="navbar-toggler d-flex flex-column border navbar-dark gap-2 py-2" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="">
+                <span class=""></span>
+                <span class=""></span>
+                <span class=""></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0" style="margin-left: auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../#doctors">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Pharmacy/pharmacy.html">Pharmacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../supplies/supplies.html">Supplies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Platform/platform.html">Platform</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Articles/Articles.html">Articles</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End navbar -->
+
+    <!-- Play List -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe id="videoPlayer" class="embed-responsive-item"
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                    <h5 id="videoTitle">Video Title</h5>
+                    <p id="videoDuration">Duration: 3:32</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h5>Playlist</h5>
+                <ul id="videoList" class="list-group">
+                    <!-- Playlist items will be inserted here by JavaScript -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Play List -->
+
+    <!-- Footer -->
+    <footer class="container-fluid mx-auto row pb-5 px-5 mt-5"
+        style="background-color: var(--silver-sky); padding-top: 20px;">
+        <div class="col-lg-4 col-md-12 flex-grow-1" class="navbar-brand d-flex align-items-end">
+            <a style="width: fit-content;" class="ps-3 pt-0 navbar-brand d-flex align-items-end" href="/">
+                <span>Platform</span>
+            </a>
+
+            <div style="font-size: 25px;">
+                We appreciate helping you in any medical department you need at any
+                time and anywhere
+            </div>
+
+            <div class="mt-5 d-flex justify-content-lg-start justify-content-center mb-5 mb-lg-0" style="gap: 15px">
+                <a href="https://fb.com" target="_blank" style="
+                      display: block;
+                      width: 80px;
+                      height: 80px;
+                      background-color: var(--azure-blue);
+                      border-radius: 999px;
+                      display: grid;
+                      place-items: center;
+                    ">
+                    <img style="display: block; width: 40px" src="../images/facebook.png" alt="facebook-icon">
+                </a>
+
+                <a href="https://goo.gle/" target="_blank" style="
+                      display: block;
+                      width: 80px;
+                      height: 80px;
+                      background-color: var(--azure-blue);
+                      border-radius: 999px;
+                      display: grid;
+                      place-items: center;
+                    ">
+                    <img style="display: block; width: 40px; height: 40px" src="../images/google (1).png"
+                        alt="google-icon">
+                </a>
+
+                <a href="https://instagr.am/" target="_blank" style="
+                      display: block;
+                      width: 80px;
+                      height: 80px;
+                      background-color: var(--azure-blue);
+                      border-radius: 999px;
+                      display: grid;
+                      place-items: center;
+                    ">
+                    <img style="display: block; width: 40px; height: 40px" src="../images/instagram.png"
+                        alt="instagram-icon">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-center flex-grow-1">
+            <div style="font-size: 30px; font-weight: 700; margin-bottom: 25px">
+                Services
+            </div>
+
+            <ul class="p-0 navbar-nav d-flex align-items-center">
+                <li class="navbar-item">
+                    <a class="nav-link" style="font-size: 25px; font-weight: 400" href="../Pharmacy/pharmacy.html">
+                        Pharmacy
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a class="nav-link" style="font-size: 25px; font-weight: 400" href="../supplies/supplies.html">
+                        Supplies
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a class="nav-link" style="font-size: 25px; font-weight: 400"
+                        href="../Hospital/El-Nass-Hospital/El-NassHospital.html">
+                        Hospital
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a class="nav-link" style="font-size: 25px; font-weight: 400" href="../Platform/platform.html">
+                        Platform
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 flex-grow-1">
+            <div class="text-lg-start text-center mx-lg-2 mx-0"
+                style="font-size: 30px; font-weight: 700; margin-bottom: 25px">
+                Get in touch
+            </div>
+
+            <ul class="p-0 navbar-nav d-flex align-items-center align-items-lg-start" style="font-size: 25px">
+                <li class="navbar-item">
+                    <a class="nav-link" style="font-size: 25px; font-weight: 400" href="tel:+201206115962">
+                        (+20) 120 611 5962
+                    </a>
+                </li>
+
+                <li class="navbar-item">
+                    <a class="nav-link" style="font-size: 25px; font-weight: 400"
+                        href="mailto:hayatyasser160@gmail.com">
+                        hayatyasser160@gmail.com
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const videos = [
+            { title: "Video Title", url: "https://www.youtube.com/embed/dQw4w9WgXcQ", duration: "3:32" },
+            { title: "Video Title", url: "https://www.youtube.com/embed/3JZ_D3ELwOQ", duration: "4:12" },
+            { title: "Video Title", url: "https://www.youtube.com/embed/l482T0yNkeo", duration: "5:00" },
+        ];
+
+        const videoList = document.getElementById('videoList');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const videoTitle = document.getElementById('videoTitle');
+        const videoDuration = document.getElementById('videoDuration');
+
+        videos.forEach((video, index) => {
+            const listItem = document.createElement('li');
+            listItem.className = 'list-group-item video-list-item';
+            listItem.innerText = video.title;
+            listItem.setAttribute('data-url', video.url);
+            listItem.setAttribute('data-title', video.title);
+            listItem.setAttribute('data-duration', video.duration);
+            listItem.onclick = () => {
+                document.querySelectorAll('.video-list-item').forEach(item => item.classList.remove('active-video'));
+                listItem.classList.add('active-video');
+                videoPlayer.src = video.url;
+                videoTitle.innerText = video.title;
+                videoDuration.innerText = `Duration: ${video.duration}`;
+            };
+            videoList.appendChild(listItem);
+
+            if (index === 0) {
+                listItem.classList.add('active-video');
+                videoTitle.innerText = video.title;
+                videoDuration.innerText = `Duration: ${video.duration}`;
+            }
+        });
+    </script>
+    <!-- Script -->
+
+</body>
+
+</html>
