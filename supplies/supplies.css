@@ -260,102 +260,10 @@ nav .navbar-collapse ul li {
 
 /* carousel */
 
-/* .container>section::before,
-.container>section::after {
-    content: '';
-    background-color: #A1A1A1;
-    box-shadow: 0px 4px 4px 0px #00000040 inset;
-    width: 50%;
-    height: 30px;
-    position: absolute;
-} */
 
-/* .container>section::before {
-    top: -1.6rem;
-    left: 0px;
-    transform: skewY(3deg);
-    transform-origin: top right;
+
+@media (min-width: 768px) {
+    footer {
+        padding: 16px 90px !important;
+    }
 }
-
-.container>section::after {
-    top: 2px;
-    right: 0rem;
-    transform: skewY(-2.7deg);
-    transform-origin: top left;
-} */
-
-/* Shape Media */
-/* X-small Screen */
-/* @media (max-width: 767.9px) {
-    .container>section::before {
-        top: 0rem;
-        left: 0px;
-        transform: skewY(7deg);
-    }
-
-    .container>section::after {
-        top: 0rem;
-        right: 0rem;
-        transform: skewY(-6.7deg);
-    }
-} */
-
-/* XX-small Screen */
-/* @media (max-width: 500px) {
-    .container>section::before {
-        top: 0rem;
-        left: 0px;
-        transform: skewY(8deg);
-    }
-
-    .container>section::after {
-        top: 0rem;
-        right: 0rem;
-        transform: skewY(-8.5deg);
-    }
-} */
-
-/* small Screen */
-/* @media (min-width: 767.9px) {
-    .container>section::before {
-        top: 0rem;
-        left: 0px;
-        transform: skewY(5deg);
-    }
-
-    .container>section::after {
-        top: 0rem;
-        right: 0rem;
-        transform: skewY(-5deg);
-    }
-} */
-
-/* medium Screen */
-/* @media (min-width: 768px) {
-    .container>section::before {
-        top: 0rem;
-        left: 0px;
-        transform: skewY(5deg);
-    }
-
-    .container>section::after {
-        top: 0rem;
-        right: 0rem;
-        transform: skewY(-5deg);
-    }
-} */
-
-/* Large Screen */
-/* @media (min-width: 1200px) {
-    .container>section::before {
-        top: 0rem;
-        left: 0px;
-        transform: skewY(3deg);
-    }
-
-    .container>section::after {
-        top: 0rem;
-        right: 0rem;
-        transform: skewY(-3deg);
-    }
-} */
