@@ -93,11 +93,13 @@
 
 /*  */
 @media (min-width: 768px) {
-    .patient-testimonials {
-        padding: var(--section-padding);
-    }
-
     footer {
         padding: 16px 90px !important;
+    }
+}
+
+@media (min-width: 900px) {
+    .patient-testimonials {
+        padding: var(--section-padding);
     }
 }
